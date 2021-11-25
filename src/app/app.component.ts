@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  helloWorld(){
+    alert("Hey SuperApp");
+  }
+
   title = 'superappfront';
 }
