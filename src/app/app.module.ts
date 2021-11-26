@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavPrincipalComponent } from './shared/nav-principal/nav-principal.component';
 import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
+import { TableComponent } from './pages/graficos/table/table.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.comp
     HomeComponent,
     DashboardComponent,
     NavPrincipalComponent,
-    NavDashboardComponent
+    NavDashboardComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
