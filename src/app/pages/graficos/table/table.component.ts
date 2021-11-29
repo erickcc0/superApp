@@ -13,14 +13,18 @@ import CustomStore from 'devextreme/data/custom_store';
 })
 export class TableComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
-
   dataSource: any;
-
   connectionStarted: boolean;
 
   constructor() {
+    this.connectionStarted = false;
+  }
+
+  ngOnInit(): void {
+    this.metodoTabla();
+  }
+
+  metodoTabla(): void {
     this.connectionStarted = false;
 
     const hubConnection = new HubConnectionBuilder()
@@ -29,6 +33,8 @@ export class TableComponent implements OnInit {
         transport: HttpTransportType.WebSockets,
       })
       .build();
+    
+      console.log(hubConnection);
 
     const store = new CustomStore({
       load: () => hubConnection.invoke('getAllStocks'),
@@ -47,3 +53,5 @@ export class TableComponent implements OnInit {
   }
 
 }
+  
+

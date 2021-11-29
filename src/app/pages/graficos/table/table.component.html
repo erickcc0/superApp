@@ -38,19 +38,24 @@
       [repaintChangesOnly]="true"
       [highlightChanges]="true"
     >
-
+      <!-- Columna Last Update -->
       <dxi-column
         dataField="lastUpdate"
         dataType="date"
         [width]="115"
-        format="longTime"
       >
       </dxi-column>
 
-      <dxi-column dataField="symbol"> </dxi-column>
+      <!-- Columna Symbol -->
+      <dxi-column 
+        dataField="symbol"
+      > 
+      </dxi-column>
+      
       <dxi-column
         dataField="price"
         dataType="number"
+        [width]="100"
         format="#0.####"
         cellTemplate="priceCellTemplate"
       >
@@ -69,6 +74,18 @@
       </dxi-column>
 
       <dxi-column dataField="dayMin" dataType="number" format="#0.####">
+      </dxi-column>
+
+      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
+      </dxi-column>
+
+      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
+      </dxi-column>
+
+      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
+      </dxi-column>
+
+      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
       </dxi-column>
 
       <dxi-column dataField="dayMax" dataType="number" format="#0.####">
