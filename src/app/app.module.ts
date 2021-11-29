@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { DxButtonModule } from 'devextreme-angular';
 import { DxTemplateModule } from 'devextreme-angular';
 import { DxDataGridModule } from 'devextreme-angular';
+import { DxCircularGaugeModule } from 'devextreme-angular';
+import { DxChartModule } from 'devextreme-angular';
+import { DxSelectBoxModule } from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavPrincipalComponent } from './shared/nav-principal/nav-principal.component';
 import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
 import { TableComponent } from './pages/graficos/table/table.component';
+import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshome.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,8 @@ import { TableComponent } from './pages/graficos/table/table.component';
     DashboardComponent,
     NavPrincipalComponent,
     NavDashboardComponent,
-    TableComponent
+    TableComponent,
+    GraficoshomeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,10 @@ import { TableComponent } from './pages/graficos/table/table.component';
     HttpClientModule,
     DxButtonModule,
     DxTemplateModule,
-    DxDataGridModule
+    DxDataGridModule,
+    DxCircularGaugeModule,
+    DxChartModule,
+    DxSelectBoxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
