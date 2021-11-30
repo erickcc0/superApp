@@ -1,28 +1,33 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ResumenComponent } from './components/recetas/resumen/resumen.component';
+
 import { InretailComponent } from './components/inretail/inretail.component';
 import { NeosaludComponent } from './components/neosalud/neosalud.component';
-import { UseroptionsComponent } from './components/useroptions/useroptions.component';
-
-
+import {
+  ResumenComponent,
+} from './components/recetas/resumen/resumen.component';
+import {
+  UseroptionsComponent,
+} from './components/useroptions/useroptions.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   declarations: [
-  
+    DashboardComponent,
     ResumenComponent,
-       InretailComponent,
-       NeosaludComponent,
-       UseroptionsComponent
+    InretailComponent,
+    NeosaludComponent,
+    UseroptionsComponent
   ],
   imports: [
-    CommonModule,
+    DashboardRoutingModule,
     HttpClientModule
   ],
   providers: [],
-  exports: [
-    UseroptionsComponent
-  ]
+  // exports: [
+  //   UseroptionsComponent
+  // ],
+  bootstrap: [DashboardComponent]
 })
 export class DashboardModule { }
