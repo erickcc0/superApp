@@ -7,5 +7,17 @@
 }
 
 body{
-    background: #edf2f8;  
+    background: #EDEEF2 !important;
 }
+.arrow svg{
+    color: #3ACC6E;
+    padding-left: 2px;
+    height: 13px;
+  }
+  
+  
+  .arrow-red svg{
+    color: red;
+    padding-left: 2px;
+    height: 13px;
+  }

@@ -1,117 +1,103 @@
 <br><br>
-<table id="t-head">
-    <th></th>
-    <th>DDD</th>
-    <th>Receta</th>
-    <th>Cobertura</th>
-    <th></th>
-</table>
-
-<table class="table table-borderless">
-    <thead>
-        <tr>
-            <th>Consultor</th>
-            <th>Evo Cont</th>
-            <th>Marcas Cont</th>
-            <th>Crec % no Cont</th>
-            <th>Marcas no Cont</th>
-            <th>EVO</th>
-            <th>Marcas</th>
-            <th>General</th>
-            <th>VIP</th>
-            <th>Nota</th>
-            <th>Rk</th>
-        </tr>
-    </thead>
-
-</table>
-<br>
-
-<div class="center">
-
-  <div ng-if="connectionStarted">
+<div class="container">
+    <table id="t-head">
+        
+  <th></th>
+  <th><strong>DDD</strong></th>
+  <th><strong>Receta</strong></th>
+  <th><strong>Cobertura</strong></th>
+  <th></th>
+    </table>
     
-    <dx-data-grid
-      id="gridContainer"
-      [dataSource]="dataSource"
-      [showBorders]="true"
-      [repaintChangesOnly]="true"
-      [highlightChanges]="true"
-    >
-      <!-- Columna Last Update -->
-      <dxi-column
-        dataField="lastUpdate"
-        dataType="date"
-        [width]="115"
-      >
-      </dxi-column>
-
-      <!-- Columna Symbol -->
-      <dxi-column 
-        dataField="symbol"
-      > 
-      </dxi-column>
-      
-      <dxi-column
-        dataField="price"
-        dataType="number"
-        [width]="100"
-        format="#0.####"
-        cellTemplate="priceCellTemplate"
-      >
-      </dxi-column>
-
-      <dxi-column
-        dataField="change"
-        dataType="number"
-        [width]="140"
-        format="#0.####"
-        cellTemplate="changeCellTemplate"
-      >
-      </dxi-column>
-
-      <dxi-column dataField="dayOpen" dataType="number" format="#0.####">
-      </dxi-column>
-
-      <dxi-column dataField="dayMin" dataType="number" format="#0.####">
-      </dxi-column>
-
-      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
-      </dxi-column>
-
-      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
-      </dxi-column>
-
-      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
-      </dxi-column>
-
-      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
-      </dxi-column>
-
-      <dxi-column dataField="dayMax" dataType="number" format="#0.####">
-      </dxi-column>
-  
-      <div
-        *dxTemplate="let cell of 'priceCellTemplate'"
-        [class.inc]="cell.data.change > 0"
-        [class.dec]="cell.data.change < 0"
-      >
-        <span>{{ cell.text }}</span>
-      </div>
-      
-      <div
-        *dxTemplate="let cell of 'changeCellTemplate'"
-        [class.inc]="cell.data.change > 0"
-        [class.dec]="cell.data.change < 0"
-      >
-        <span class="current-value">{{ cell.text }}</span>
-        <span class="arrow"></span>
-        <span class="diff">{{ cell.data.percentChange.toFixed(2) }}%</span>
-      </div>
-
-    </dx-data-grid>
-  
-  </div>
+    <table id="t-head2" class="table table-borderless">
+        <thead>
+            <tr>
+                <th>Consultor</th>
+                <th>Evo Cont</th>
+                <th>Marcas Cont</th>
+                <th>Crec % no Cont</th>
+                <th>Marcas no Cont</th>
+                <th>EVO</th>
+                <th>Marcas</th>
+                <th>General</th>
+                <th>VIP</th>
+                <th>Nota</th>
+                <th>Rk</th>
+            </tr>
+        </thead>
+    
+    </table>
+    
+    <table id="body">
+    
+        <tbody>
+            <tr>
+                <th>Ana Romero Inojosa </th>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>104</td>
+                <td></td>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
+                <td >50%</td>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>98</td>
+                <td></td>
+                <td>96.80%</td>
+                <td>100%</td>
+                <td>18.6</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th>Ana Romero Inojosa </th>
+                <td class="arrow-red"><i class="fas fa-arrow-down"></i>104</td>
+                <td></td>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
+                <td>50%</td>
+                <td class="arrow"> <i class="fas fa-arrow-up"></i>98</td>
+                <td></td>
+                <td>96.80%</td>
+                <td>100%</td>
+                <td>18.6</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th>Ana Romero Inojosa </th>
+                <td class="circle"><i class="fas fa-circle"></i>104</td>
+                <td></td>
+                <td class="circle"><i class="fas fa-circle"></i>50%</td>
+                <td>50%</td>
+                <td class="circle"><i class="fas fa-circle"></i>98</td>
+                <td></td>
+                <td>96.80%</td>
+                <td>100%</td>
+                <td>18.6</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th>Ana Romero Inojosa </th>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>104</td>
+                <td></td>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
+                <td>50%</td>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>98</td>
+                <td></td>
+                <td>96.80%</td>
+                <td>100%</td>
+                <td>18.6</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th>Ana Romero Inojosa </th>
+                <td class="arrow-red"><i class="fas fa-arrow-down"></i>104</td>
+                <td></td>
+                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
+                <td>50%</td>
+                <td class="circle"><i class="fas fa-circle"></i>98</td>
+                <td></td>
+                <td>96.80%</td>
+                <td>100%</td>
+                <td>18.6</td>
+                <td> </td>
+            </tr>
+        </tbody>
+    
+    </table> 
 
 </div>
-

@@ -1,120 +1,111 @@
-/*Diseño de la cabezera de la tabla*/
+.container{
+    font-size: 14px;
+    margin-bottom: 50px;
+}
 .table{
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 17px 17px;
 }   
-  
+#t-head , #t-head2{
+    background: #E0E2EC;
+}
+#t-head2{
+    margin-bottom: 8px;
+}
+
+
 table {
     font-weight: lighter;
     background: white;
-    width: 90%;
+    width: 97%;
     margin: 0px auto;
-    border-radius: 20px;
-    margin: 0px auto;
-}
-  
-#t-head{
-    border-radius: 20px 20px 0px 0px;
-    text-align: center; 
-}
-  
-  
-#t-head th{
-  font-weight: normal;
-}
-#t-head th:nth-child(1) {
-  width: 18%;
-}
-#t-head th:nth-child(2) {
-  width: 32%;
-  border-bottom: 2px solid rgb(61, 148, 189);
-}
-  
-#t-head th:nth-child(3) {
+    border-radius: 17px;
+    color: #004F6D;
+  }
+
+  #t-head{
+     border-radius: 17px 17px 0px 0px;
+     text-align: center; 
+  }
+ 
+
+   #t-head th{
+    font-weight: normal;
+   }
+   #t-head th:nth-child(1) {
+    width: 14%;
+  }
+  #t-head th:nth-child(2) {
+    width: 32%;
+    border-bottom: 2px solid rgb(61, 148, 189);
+  }
+  #t-head th:nth-child(3) {
   width: 16%;
   border-bottom: 2px solid rgb(92, 187, 92);
 }
-  
 #t-head th:nth-child(4) {
     width: 18%;
     border-bottom: 2px solid rgb(229, 238, 109);
-}
-  
-  
+  }
+
+
 tr th{
     font-weight: normal;
 }
-th, td {
-  padding: 20px; 
-}
-  
-#body th,td{
+  th, td {
+    padding: 10px;
+
+  }
+
+ #body th,td{
     border-bottom: 1px solid #d6dfeb;
-}
-  
-thead th:nth-child(1) {
-    width: 17%;
-}
-thead th:nth-child(3) {
+ }
+
+  thead th:nth-child(1) {
+    width: 19%;
+  }
+  thead th:nth-child(3) {
     width: 7%;
-}
-thead th:nth-child(4) {
+  }
+  thead th:nth-child(4) {
     width: 7%;
-}
-thead th:nth-child(5) {
+  }
+  thead th:nth-child(5) {
     width: 9%;
-}
-thead th:nth-child(7) {
+  }
+  thead th:nth-child(7) {
+    width: 7%;
+  }  thead th:nth-child(11) {
     width: 9%;
-}  
-thead th:nth-child(11) {
+  }
+
+  tbody td:nth-child(1) {
+    width: 11%;
+  }
+  tbody td:nth-child(2) {
+    width: 10%;
+  }
+  tbody td:nth-child(3) {
+    width: 7%;
+  }
+  tbody td:nth-child(4) {
+    width: 7%;
+  }
+  tbody td:nth-child(5) {
     width: 9%;
-}
+  }
+  tbody td:nth-child(7) {
+    width: 9%;
+  }  
+  tbody td:nth-child(11) {
+    width: 9%;
+  }
+
+
 thead{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-/*Tabla DevExtreme*/
-::ng-deep #gridContainer span.current-value {
-    display: inline-block;
-    margin-right: 5px;
-}
-  
-::ng-deep #gridContainer span.diff {
-    width: 50px;
-    display: inline-block;
-}
-  
-::ng-deep #gridContainer .inc {
-    color: #2ab71b;
-}
-  
-::ng-deep #gridContainer .dec {
-    color: #f00;
-}
-  
-::ng-deep #gridContainer .inc .arrow,
-::ng-deep #gridContainer .dec .arrow {
-    display: inline-block;
+.circle svg{
+    color: #FCD657;
     height: 10px;
-    width: 10px;
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-}
-  
-::ng-deep #gridContainer .inc .arrow {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADKSURBVHjaYtTaLs1ABEiG0nPRJa56PEHhsxBhmCUQT4OyrwHxcXyKmQgYJgHE64CYDYrXQcXIMhCbAcgWkGzgNKh38QUB0QamIUUErkhKI9ZAGyCeTERkTYaqxWsgKA2txhdG6GGsvUNGGpeBRMUiGhCFGsqGzUBQQJsxkA5AemaiG5hDIBIIgQSgK0FmMDACs549kN5FZLjhA7+A2A2U9YSAOBeLAk4gnoBDczoOcSFGPIUDPxB/wCHHiKtwYGKgMhg1cBAaCBBgAJTUIL3ToPZfAAAAAElFTkSuQmCC');
-}
-  
-::ng-deep #gridContainer .dec .arrow {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADJSURBVHjaYvzPgBfgkhYA4o8QFahKmBioDEYNHIQGsgBxIBCLkqgvAYi/g1mMjMjir0EJzR6If/6HpChKMMgMe3DKBeIcKhiY8x/MYoDj+RQYNgdkGLqBbEB8kgzDToL1YjEQhKWB+BUJhj0H64Eahs1AELYhMpJ+gtUiGYbLQBBOI8LANLBaIg1kAAc0vkiAqSPBQFAkHcNi2DGoHMkGgrAENOCRI0ECRQ2JBoKwJTQCfkLZDPgMZPxPXN5NhtJzMSsJVBMAAgwAyWSY2svfmrwAAAAASUVORK5CYII=');
-}
-/*Div de centrado de la tabla*/
-.center {
-    justify-content: center;
-    margin: 1rem;
-    padding: 1rem;
-    text-align: center;
-    display: block;
-    align-items: center;
-    width: auto;
 }
