@@ -18,6 +18,8 @@ import { NavPrincipalComponent } from './shared/nav-principal/nav-principal.comp
 import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
 import { TableComponent } from './pages/graficos/table/table.component';
 import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshome.component';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshom
     DxDataGridModule,
     DxCircularGaugeModule,
     DxChartModule,
-    DxSelectBoxModule
+    DxSelectBoxModule,
+    DashboardModule,
+    DashboardRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

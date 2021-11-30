@@ -1,0 +1,89 @@
+#head-table{
+    display: flex;
+    flex-direction: column;
+    width: 820px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 18px;
+    height: 125px;
+    justify-content: center;
+    margin-left: 20%;
+    font-size: 14px;
+}
+
+
+#t-head{
+    height: 40px;
+    width: 640px;
+    margin-left: 32%;
+}
+
+#t-head th{
+    color: #246881;
+font-weight: normal;
+font-size: 14px;
+padding-left: 28px;   }
+
+
+#t-body{
+    margin-left: 12%;
+    justify-content: center;
+    border-radius: 18px;
+    background: #3ACC6E;
+    color: white;
+    width: 680px;
+}
+
+#t-body table{
+    margin: 12px;
+    width: 640px;
+    border-radius: 15px;
+}
+#t-body td{
+    padding-left: 30px;
+}
+
+#t-body td:nth-child(1){
+    width: 30%;
+}
+
+ 
+
+
+#body-tables{
+    font-size: 14px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+ }
+
+.item1,.item2{
+    background: white;
+    border-radius: 18px;
+    padding: 10px;
+}
+.item1{margin-right: 4px;}
+.item2{margin-left: 4px;}
+
+#body-tables th {
+    color: #316F88;
+    padding: 11px;
+}
+#body-tables td {
+
+    color: #8FB1BF;
+    border-bottom: 1px solid #F4EFF7;
+    padding: 11px;
+}
+
+.fa-prescription-bottle-alt{
+   color: #78A2B2;
+}
+.arrow{
+    font-weight: bold;
+    color:#3ACC6E !important;
+  }
+  .arrow-red{
+    font-weight: bold;
+    color:red !important;
+  }
