@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     getUser(): void {
       this._userService.getUser()
           .toPromise().then(
-            (response) => {
+            (response: any) => {
               this.users = response;
               console.table(this.users);
             }
