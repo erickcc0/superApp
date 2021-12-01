@@ -5,13 +5,47 @@ justify-content: center;
 }
 
 #table-perfil .perfil {
-flex-basis: 55%;
+flex-basis: 57%;
+}
+#head{
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: -16px;
+}
+#head thead{
+    background: #E0E2EC;
+}
+#head th:nth-child(1){
+    width: 80%;
+}
+#head button{
+    border-radius: 18px;
+    height: 30px;
+    *margin-top: -50px;
+    border: none;
+    color: #266882;
+}
+.box p{
+    margin-top: -60px;
+    color: #009CDE;
+    font-size: 13px;
+    margin-bottom: -1px;
+}
+.input1{
+    padding-top: 10px;
+}
+.input1 input{
+    border-radius: 20px;
+}
+
+
+#body thead{
+    background: #E0E2EC;
 }
 #body{
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    border-radius: 15px;
     overflow: hidden;
 }
 #body th{
@@ -19,8 +53,13 @@ flex-basis: 55%;
     text-align: left !important;
     font-size: 12px;
 }
+#body svg{
+    color: #009CDE;
+}
+
 #body td{
     color: #77A0B1;
+    border-bottom: 1px solid #ECECEC;
 }
 
 #body td , th{
@@ -31,9 +70,23 @@ flex-basis: 55%;
     width: 30%;
 }
 
-#body thead{
-    background: #E0E2EC;
-}
+
 .bg-azul-claro{
     background: #D7F1F8;
+}
+
+.arrow {
+    color: #3ACC6E !important;
+  }
+  .arrow-red {
+    color: red !important;
+  }
+
+  .arrow button{
+      font-size: 11px;
+      height: 21px;
+  }
+  .arrow-red button{
+    font-size: 11px;
+    height: 21px;
 }

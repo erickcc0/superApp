@@ -10,14 +10,14 @@ body{
     background: #EDEEF2 !important;
 }
 .arrow svg{
-    color: #3ACC6E;
+    color: #3ACC6E !important;
     padding-left: 2px !important;
     height: 13px !important;
   }
   
   
   .arrow-red svg{
-    color: red;
+    color: red !important;
     padding-left: 2px !important;
     height: 13px !important;
   }
