@@ -11,13 +11,13 @@ body{
 }
 .arrow svg{
     color: #3ACC6E;
-    padding-left: 2px;
-    height: 13px;
+    padding-left: 2px !important;
+    height: 13px !important;
   }
   
   
   .arrow-red svg{
     color: red;
-    padding-left: 2px;
-    height: 13px;
+    padding-left: 2px !important;
+    height: 13px !important;
   }

@@ -5,6 +5,7 @@ import { ResumenComponent } from './components/recetas/resumen/resumen.component
 import { InretailComponent } from './components/inretail/inretail.component';
 import { NeosaludComponent } from './components/neosalud/neosalud.component';
 import { UseroptionsComponent } from './components/useroptions/useroptions.component';
+import { PerfilComponent } from './components/recetas/perfil/perfil.component';
 
 
 
@@ -15,7 +16,8 @@ import { UseroptionsComponent } from './components/useroptions/useroptions.compo
     InretailComponent,
     NeosaludComponent,
     UseroptionsComponent,
-    ResumenComponent
+    ResumenComponent,
+    PerfilComponent
        
   ],
   imports: [
@@ -24,6 +26,7 @@ import { UseroptionsComponent } from './components/useroptions/useroptions.compo
   ],
   providers: [],
   exports: [
+    PerfilComponent,
     UseroptionsComponent,
     ResumenComponent
   ]
