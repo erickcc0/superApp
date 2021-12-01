@@ -20,6 +20,9 @@ import { TableComponent } from './pages/graficos/table/table.component';
 import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshome.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
+import { MainDetalleConsultorComponent } from './pages/detalle-consultor/main-detalle-consultor/main-detalle-consultor.component';
+import { SidebarComponent } from './pages/detalle-consultor/sidebar/sidebar.component';
+import { BodyComponent } from './pages/detalle-consultor/body/body.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.modu
     NavPrincipalComponent,
     NavDashboardComponent,
     TableComponent,
-    GraficoshomeComponent
+    GraficoshomeComponent,
+    MainDetalleConsultorComponent,
+    SidebarComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

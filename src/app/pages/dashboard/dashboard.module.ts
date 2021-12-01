@@ -8,13 +8,15 @@ import { UseroptionsComponent } from './components/useroptions/useroptions.compo
 
 
 
+
 @NgModule({
   declarations: [
-  
     ResumenComponent,
-       InretailComponent,
-       NeosaludComponent,
-       UseroptionsComponent
+    InretailComponent,
+    NeosaludComponent,
+    UseroptionsComponent,
+    ResumenComponent
+       
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { UseroptionsComponent } from './components/useroptions/useroptions.compo
   ],
   providers: [],
   exports: [
-    UseroptionsComponent
+    UseroptionsComponent,
+    ResumenComponent
   ]
 })
 export class DashboardModule { }
