@@ -6,16 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  private _opened: boolean = false;
-  constructor() { }
+  siberbarApplied: boolean = false;
 
   ngOnInit(): void {
+    
   }
 
-  
-
-  private _toggleSidebar() {
-    this._opened = !this._opened;
+  openNavbar() {
+    this.siberbarApplied = !this.siberbarApplied;
   }
+    
 
 }
