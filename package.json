@@ -23,6 +23,7 @@
     "devextreme": "^21.2.3",
     "devextreme-angular": "^21.2.3",
     "devextreme-schematics": "^1.2.22",
+    "ng-sidebar": "^9.4.3",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -26,6 +26,7 @@ import {
 // import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
 import { TableComponent } from './pages/graficos/table/table.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SidebarModule } from 'ng-sidebar';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { HomeComponent } from './pages/home/home.component';
     DxDataGridModule,
     DxCircularGaugeModule,
     DxChartModule,
-    DxSelectBoxModule,
+    DxSelectBoxModule
     // DashboardModule,
     // DashboardRoutingModule
   ],
