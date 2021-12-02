@@ -9,17 +9,17 @@ import { catchError } from 'rxjs/operators';
 export class UserService {
 
   public url = '';
-  public headers1 = {'Content-Type': 'application/json'};
+  public headers = {'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked'};
 
   constructor(
     private _http: HttpClient
   ) { 
-    this.url = 'https://hs1gziu4m2.execute-api.us-east-1.amazonaws.com/profile/1';
+    this.url = 'https://2rx6x29k36.execute-api.us-east-1.amazonaws.com/profile/1';
   }
 
   getUser(): Observable<any> {
     return this._http 
-        .get(this.url, { headers: this.headers1})
+        .get(this.url, { headers: this.headers})
         .pipe(
           catchError((e) => {
             if(e.status === 404) {
