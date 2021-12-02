@@ -21,11 +21,11 @@ import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshom
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
 import { MainDetalleConsultorComponent } from './pages/detalle-consultor/main-detalle-consultor/main-detalle-consultor.component';
-import { SidebarComponent } from './pages/detalle-consultor/sidebar/sidebar.component';
-import { BodyComponent } from './pages/detalle-consultor/body/body.component';
 import { Grafico1Component } from './pages/detalle-consultor/grafico1/grafico1.component';
 import { Grafico2Component } from './pages/detalle-consultor/grafico2/grafico2.component';
 import { Grafico3Component } from './pages/detalle-consultor/grafico3/grafico3.component';
+import { SidebarComponent } from './pages/detalle-consultor/sidebar/sidebar.component';
+import { BodyComponent } from './pages/detalle-consultor/body/body.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +37,12 @@ import { Grafico3Component } from './pages/detalle-consultor/grafico3/grafico3.c
     TableComponent,
     GraficoshomeComponent,
     MainDetalleConsultorComponent,
-    SidebarComponent,
-    BodyComponent,
     Grafico1Component,
     Grafico2Component,
-    Grafico3Component
+    Grafico3Component,
+    SidebarComponent,
+    BodyComponent
+
   ],
   imports: [
     BrowserModule,
@@ -56,6 +57,7 @@ import { Grafico3Component } from './pages/detalle-consultor/grafico3/grafico3.c
     DashboardModule,
     DashboardRoutingModule
   ],
+  exports:[GraficoshomeComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
