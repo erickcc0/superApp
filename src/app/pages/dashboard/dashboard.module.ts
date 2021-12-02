@@ -6,9 +6,6 @@ import { NeosaludComponent } from './components/neosalud/neosalud.component';
 import {
   ResumenComponent,
 } from './components/recetas/resumen/resumen.component';
-import {
-  UseroptionsComponent,
-} from './components/useroptions/useroptions.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
@@ -17,8 +14,7 @@ import { DashboardComponent } from './dashboard.component';
     DashboardComponent,
     ResumenComponent,
     InretailComponent,
-    NeosaludComponent,
-    UseroptionsComponent
+    NeosaludComponent
   ],
   imports: [
     DashboardRoutingModule,

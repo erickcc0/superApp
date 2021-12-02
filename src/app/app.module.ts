@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 /*Librería DevExtreme*/
@@ -51,6 +51,9 @@ import { HomeComponent } from './pages/home/home.component';
     // DashboardRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+  ],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

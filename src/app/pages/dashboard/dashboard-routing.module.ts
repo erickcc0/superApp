@@ -9,7 +9,7 @@ import {
 } from './components/recetas/resumen/resumen.component';
 import {
   UseroptionsComponent,
-} from './components/useroptions/useroptions.component';
+} from '../../shared/useroptions/useroptions.component';
 
 const routes: Routes = [
   { path: '', component: UseroptionsComponent },
