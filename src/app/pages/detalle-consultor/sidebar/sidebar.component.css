@@ -52,4 +52,14 @@
 .bg-plomo{
     background: #bec0c9;
     color: white;
+    border: none;
+}
+#volver{
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+a{
+    color: #427B92;
+    text-decoration: none;
 }
