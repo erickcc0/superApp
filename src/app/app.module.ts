@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 /*Librería DevExtreme*/
@@ -26,6 +26,7 @@ import {
 // import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
 import { TableComponent } from './pages/graficos/table/table.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SidebarModule } from 'ng-sidebar';
 
 @NgModule({
   declarations: [
@@ -46,11 +47,14 @@ import { HomeComponent } from './pages/home/home.component';
     DxDataGridModule,
     DxCircularGaugeModule,
     DxChartModule,
-    DxSelectBoxModule,
+    DxSelectBoxModule
     // DashboardModule,
     // DashboardRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+  ],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
