@@ -27,6 +27,7 @@ import { Grafico3Component } from './pages/detalle-consultor/grafico3/grafico3.c
 import { SidebarComponent } from './pages/detalle-consultor/sidebar/sidebar.component';
 import { BodyComponent } from './pages/detalle-consultor/body/body.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { BodyComponent } from './pages/detalle-consultor/body/body.component';
     DashboardModule,
     DashboardRoutingModule
   ],
-  exports:[GraficoshomeComponent],
+  exports:[
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

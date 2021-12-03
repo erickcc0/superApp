@@ -5,12 +5,16 @@ justify-content: center;
 }
 
 #table-perfil .perfil {
+    margin-left: 50px;
 flex-basis: 57%;
 }
 #head{
     border-radius: 18px;
     overflow: hidden;
     margin-bottom: -16px;
+}
+td{
+    transition: 400ms all;
 }
 #head thead{
     background: #E0E2EC;
