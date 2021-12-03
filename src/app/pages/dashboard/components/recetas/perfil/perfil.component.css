@@ -30,10 +30,11 @@ td{
     color: #266882;
 }
 .box p{
+    font-weight: 500;
     margin-top: -60px;
     color: #009CDE;
     font-size: 13px;
-    margin-bottom: -1px;
+    margin-bottom: 1px;
 }
 .input1{
     padding-top: 10px;

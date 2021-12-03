@@ -7,6 +7,7 @@ import { NeosaludComponent } from './components/neosalud/neosalud.component';
 import { UseroptionsComponent } from './components/useroptions/useroptions.component';
 import { PerfilComponent } from './components/recetas/perfil/perfil.component';
 import { PerfilDetalleComponent } from './components/recetas/perfil-detalle/perfil-detalle.component';
+import { MarcasComponent } from './components/recetas/marcas/marcas.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PerfilDetalleComponent } from './components/recetas/perfil-detalle/perf
     UseroptionsComponent,
     ResumenComponent,
     PerfilComponent,
-    PerfilDetalleComponent
+    PerfilDetalleComponent,
+    MarcasComponent
        
   ],
   imports: [
@@ -28,7 +30,8 @@ import { PerfilDetalleComponent } from './components/recetas/perfil-detalle/perf
     PerfilComponent,
     UseroptionsComponent,
     ResumenComponent,
-    PerfilDetalleComponent
+    PerfilDetalleComponent,
+    MarcasComponent
   ]
 })
 export class DashboardModule { }
