@@ -2,7 +2,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    *font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 
 }
 
@@ -10,14 +10,14 @@ body{
     background: #EDEEF2 !important;
 }
 .arrow svg{
-    color: #3ACC6E;
-    padding-left: 2px;
-    height: 13px;
+    color: #3ACC6E !important;
+    padding-left: 2px !important;
+    height: 13px !important;
   }
   
   
   .arrow-red svg{
-    color: red;
-    padding-left: 2px;
-    height: 13px;
+    color: red !important;
+    padding-left: 2px !important;
+    height: 13px !important;
   }

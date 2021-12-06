@@ -14,19 +14,21 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import {
-//   DashboardRoutingModule,
-// } from './pages/dashboard/dashboard-routing.module';
-// import { DashboardModule } from './pages/dashboard/dashboard.module';
-import {
-  GraficoshomeComponent,
-} from './pages/graficos/graficoshome/graficoshome.component';
-// import { DashboardComponent } from './pages/dashboard/dashboard.component';
-// import { NavPrincipalComponent } from './shared/nav-principal/nav-principal.component';
-// import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
-import { TableComponent } from './pages/graficos/table/table.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SidebarModule } from 'ng-sidebar';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NavPrincipalComponent } from './shared/nav-principal/nav-principal.component';
+import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
+import { TableComponent } from './pages/graficos/table/table.component';
+import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshome.component';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
+import { MainDetalleConsultorComponent } from './pages/detalle-consultor/main-detalle-consultor/main-detalle-consultor.component';
+import { Grafico1Component } from './pages/detalle-consultor/grafico1/grafico1.component';
+import { Grafico2Component } from './pages/detalle-consultor/grafico2/grafico2.component';
+import { Grafico3Component } from './pages/detalle-consultor/grafico3/grafico3.component';
+import { SidebarComponent } from './pages/detalle-consultor/sidebar/sidebar.component';
+import { BodyComponent } from './pages/detalle-consultor/body/body.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,14 @@ import { SidebarModule } from 'ng-sidebar';
     // NavPrincipalComponent,
     // NavDashboardComponent,
     TableComponent,
-    GraficoshomeComponent
+    GraficoshomeComponent,
+    MainDetalleConsultorComponent,
+    Grafico1Component,
+    Grafico2Component,
+    Grafico3Component,
+    SidebarComponent,
+    BodyComponent
+
   ],
   imports: [
     BrowserModule,
@@ -51,9 +60,9 @@ import { SidebarModule } from 'ng-sidebar';
     // DashboardModule,
     // DashboardRoutingModule
   ],
-  providers: [],
-  exports: [
+  exports:[
   ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

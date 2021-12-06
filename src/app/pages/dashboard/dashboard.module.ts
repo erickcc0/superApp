@@ -1,38 +1,46 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { SideNavOuterToolbarModule, SideNavInnerToolbarModule, SingleCardModule } from '../../layouts';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ResumenComponent } from './components/recetas/resumen/resumen.component';
 import { InretailComponent } from './components/inretail/inretail.component';
 import { NeosaludComponent } from './components/neosalud/neosalud.component';
-import {
-  ResumenComponent,
-} from './components/recetas/resumen/resumen.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
-import { SidebarModule } from 'ng-sidebar';
-
+import { UseroptionsComponent } from './components/useroptions/useroptions.component';
+import { PerfilComponent } from './components/recetas/perfil/perfil.component';
+import { PerfilDetalleComponent } from './components/recetas/perfil-detalle/perfil-detalle.component';
+import { MarcasComponent } from './components/recetas/marcas/marcas.component';
+import { MercadosComponent } from './components/recetas/mercados/mercados.component';
+import { MercadosMarcasComponent } from './components/recetas/mercados-marcas/mercados-marcas.component';
+import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/neosalud-recetas.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
     ResumenComponent,
     InretailComponent,
-    NeosaludComponent
+    NeosaludComponent,
+    UseroptionsComponent,
+    ResumenComponent,
+    PerfilComponent,
+    PerfilDetalleComponent,
+    MarcasComponent,
+    MercadosComponent,
+    MercadosMarcasComponent,
+    NeosaludRecetasComponent
+       
   ],
   imports: [
-    DashboardRoutingModule,
-    HttpClientModule,
-    SidebarModule,
-    BrowserModule,
-    SideNavOuterToolbarModule,
-    SideNavInnerToolbarModule,
-    SingleCardModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
-  // exports: [
-  //   UseroptionsComponent
-  // ],
-  bootstrap: [DashboardComponent]
+  exports: [
+    PerfilComponent,
+    UseroptionsComponent,
+    ResumenComponent,
+    PerfilDetalleComponent,
+    MarcasComponent,
+    MercadosComponent,
+    MercadosMarcasComponent,
+    NeosaludRecetasComponent
+  ]
 })
 export class DashboardModule { }

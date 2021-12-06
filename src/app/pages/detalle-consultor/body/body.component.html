@@ -1,0 +1,163 @@
+<br><br><br>
+<div id="body-info" class="row">
+    <div class="col-4 row">
+        <div class="col-6 m-2 first bg-blue">
+            <h1>EVO ultimo mes</h1>
+            <span class="data" ><strong class="separar arrow-red"><i class="fas fa-arrow-down"></i>81</strong> </span ><span class="data arrow"><strong><i class="fas fa-arrow-up"></i>104</strong></span>
+            <br>
+            <p class="sub">DDD <span>Rx</span></p>
+        </div>
+        <div class="col-6 m-2 first bg-mostaza">
+            <h1>Cobertura</h1>
+            <span class="data"><strong class="separar strong">79%</strong> </span><span class="data strong"><strong>81%</strong></span>
+
+            <p class="sub">general <span style="margin-left:6px;">adicional</span></p>
+        </div>
+        <div class="col-6 m-2 first bg-verde-claro">
+            <h1>Nota</h1>
+            <span class="data"><strong>18</strong> </span>
+            <p class="sub t-verde">Ultimo mes <i class="fas fa-clipboard"></i></p>
+        </div>
+        <div class="col-6 m-2 first bg-purpura">
+            <h1>Emails</h1>
+            <p class="data"><strong>200</strong> </p>
+            <p class="sub alinear" style="color:#873DB1;">Enviados</p>
+            <i class="far fa-envelope" style="color:#873DB1; margin-top: -20px; height: 40px;"></i>
+        </div>
+    </div>
+    <div class="col-3 row">
+        <div class="col-12 m-2 item second bg-white">
+            <h1>Visitas</h1>
+            <p><span class="sub separarx">Objetivo</span> <span class="data"><strong>9,000</strong></span></p>
+            <p><span class="sub separarx">Realizadas</span> <span class="data"><strong>9,000</strong></span></p>
+        </div>
+        <div class="col-12 m-2 item second bg-white">
+            <h1>Tipo de visita</h1>
+            <p>
+                <i class="fas fa-people-arrows bg-gray-ligth"></i> <span class="separarsvg"><i class="far fa-handshake bg-gray-ligth"></i></span>
+            </p>
+            <p class="alinear data"><strong class="separarx">4,363</strong>
+                <strong>4000</strong>
+            </p>
+            <p class="sub alinear bg-gray-ligth">Virtuales <span class="separarn bg-gray-ligth">Presenciales</span> </p>
+        </div>
+    </div>
+    <div class="col-2 row mx-1">
+        <div class="col-12 m-2 item tres bg-verde-claro">
+            <h1>Entrega de MM</h1>
+            <p class="data"><strong>8,363</strong></p>
+            <p class="sub alinear t-verde">En visitas</p>
+            <p class="data"><strong>9,500</strong> </p>
+            <p class="sub alinear t-verde">Del stock</p>
+        </div>
+        <div class="col-12 m-2 item cuatro bg-white">
+            <h1>Motivo NO visita</h1>
+            <p class="sub">Sin registrar</p>
+        </div>
+    </div>
+    <div class="col-2 row ">
+        <div class="col-12 m-2 item second bg-verde-claro">
+            <h1>N°HCP'S TGT</h1>
+            <i class="fas fa-stethoscope t-verde"></i>
+            <p class="data"><strong>365</strong></p>
+            <p class="sub alinear t-verde">Medicos</p>
+        </div>
+        <div class="col-12 m-2 item second bg-verde-claro">
+            <h1>Cortesia</h1>
+            <p class="data"><strong>500</strong></p>
+            <p class="sub alinear t-verde">Adicionales</p>
+        </div>
+    </div>
+    <div class="col-1">
+    </div>
+</div>
+<!-- ******************************************************************Graficos Home -->
+<div class="graficos home bg-white">
+
+    <div id="graficos-home">
+        <div id="pie">
+          <h1>Equipo</h1>
+          <div class="skills-container">
+            <div class="circular-progress css"></div>
+            <div class="circular-progress javascript"></div>
+          </div>
+        </div>
+        <div id="tabla">
+          <div class="long-title">
+            <h3>Tendencias</h3>
+          </div>
+          <div id="chart-demo">
+            <dx-chart class="chart" [dataSource]="architecturesInfo">
+              <dxi-series valueField="smp" name="SMP" color="#7F2FAC"></dxi-series>
+              <dxi-series valueField="mmp" name="MMP" color="#52E085"></dxi-series>
+              <dxi-series valueField="cnstl" name="Cnstl" color="#009CDE"></dxi-series>
+              <dxo-common-series-settings #seriesSettings argumentField="year" [type]="types[0]">
+              </dxo-common-series-settings>
+              <dxo-margin [bottom]="20"></dxo-margin>
+              <dxo-common-axis-settings>
+                <dxo-grid [visible]="true"></dxo-grid>
+              </dxo-common-axis-settings>
+              <dxo-legend verticalAlignment="top" horizontalAlignment="right">
+              </dxo-legend>
+              <dxo-argument-axis [allowDecimals]="false" [axisDivisionFactor]="60">
+                <dxo-label>
+                  <dxo-format type="decimal"></dxo-format>
+                </dxo-label>
+              </dxo-argument-axis>
+              <dxo-export [enabled]="true"></dxo-export>
+              <dxo-tooltip [enabled]="true"></dxo-tooltip>
+            </dx-chart>
+          </div>
+        </div>
+      </div>
+
+</div>
+<!-- ************************************************************Fin Graficos Home -->
+<!-- Graficos 1 -->
+<div class="graficos g1">
+    <nav>
+        <ul class="d-flex flex-row menu-item">
+            <li class="btn p-3"><a [routerLinkActive]="['actived']">DDD Contratadas</a> </li>
+            <li class="btn p-3 separarn"> <a [routerLinkActive]="['actived']">DDD Bricks</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <app-grafico1></app-grafico1>
+</div>
+<div>
+    <button class="btn bg-transparent border-info text-info button-mas ">Ver mas</button>
+</div>
+
+<!-- Grafico 2 -->
+<div class="graficos bg-white">
+    <nav>
+        <ul class="d-flex flex-row menu-item">
+            <li class="btn p-3"><a [routerLinkActive]="['actived']">Recetas Marcas</a> </li>
+            <li class="btn p-3 separarn"> <a [routerLinkActive]="['actived']">Recetas</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <app-grafico2></app-grafico2>
+    <div>
+        <button class="btn bg-transparent border-info text-info button-mas2 ">Ver mas</button>
+    </div>
+    
+
+
+</div>
+<!-- Grafico 3 -->
+<div class="graficos bg-white g3">
+    <nav>
+        <ul class="d-flex flex-row menu-item">
+            <li class="btn p-3"><a [routerLinkActive]="['actived']">InRetail</a> </li>
+            <li class="btn p-3 separarn"> <a [routerLinkActive]="['actived']">NeoSalud</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <app-grafico3></app-grafico3>
+    <div>
+        <button class="btn bg-transparent border-info text-info button-mas3 ">Ver mas</button>
+    </div>
+    
+
+</div>

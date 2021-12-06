@@ -1,0 +1,38 @@
+.card{
+    width: 400px;
+    height: 70px;
+}
+
+.item-card{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#card-doctor .card-title{
+    font-size: 18px;
+    width:300px;
+}
+
+#img-doctor{
+   *border: 1px solid black;
+    overflow: hidden;
+    border-radius: 999px;
+    border-left: 5px;
+    height: 60px;
+    width: 60px;
+}
+
+#img-doctor img{
+    height: 70px;
+}
+#card-doctor .card-title{
+    font-size: 17px;
+    margin-top: -6px;
+}
+
+#card-doctor .card-text{
+    margin-top: -10px;
+}
+
+#card-doctor .span{
+    margin-right: 15px;
+}
