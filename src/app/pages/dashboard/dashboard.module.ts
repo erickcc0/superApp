@@ -11,6 +11,7 @@ import { MarcasComponent } from './components/recetas/marcas/marcas.component';
 import { MercadosComponent } from './components/recetas/mercados/mercados.component';
 import { MercadosMarcasComponent } from './components/recetas/mercados-marcas/mercados-marcas.component';
 import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/neosalud-recetas.component';
+import {FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,10 @@ import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/
     MarcasComponent,
     MercadosComponent,
     MercadosMarcasComponent,
-    NeosaludRecetasComponent
-       
+    NeosaludRecetasComponent,
   ],
   imports: [
+    FormsModule,
     CommonModule,
     HttpClientModule
   ],

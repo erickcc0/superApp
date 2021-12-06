@@ -64,7 +64,9 @@ td{
 .contenido th:nth-child(1){
     width: 19%;
 }
-
+.contenido table{
+    margin-bottom: 50px;
+}
 .tableh2 table{
     width: 720px;
 }
@@ -89,6 +91,7 @@ td{
     overflow: hidden;
 }
 .tablebody2 table{
+    width: 770px !important;
     margin-top: -40px;
     width: 720px;
 }
@@ -96,7 +99,9 @@ td{
     border-bottom: 1px solid #F4F4F7;
     color: #6292A5;
 }
-
+.tableb td,th{
+    padding-left: 40px;
+}
 /* Color */
 .bg-azul{
     background: #009CDE;

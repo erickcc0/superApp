@@ -28,7 +28,7 @@ td{
     margin-bottom: -10px;
 }
 .cabezera th:nth-child(1){
-    width: 80%;
+    width: 90%;
 }
 /* Second */
 .tableh1{
@@ -41,6 +41,7 @@ td{
 }
 
 .tableh1 table{
+
     width: 720px;
 }
 .tableh1 th:nth-child(1){
@@ -74,6 +75,9 @@ td{
 }
 
 /***** Cuerpo */
+.tableb td , th{
+    padding-left: 70px;
+}
 
 .tablebody{
     border-radius: 0px 0px 17px 17px;
@@ -81,7 +85,6 @@ td{
     overflow: hidden;
 }
 .tablebody table{
-    margin-top: -40px;
     width: 720px;
 }
 .tablebody td {
@@ -98,8 +101,8 @@ td{
     overflow: hidden;
 }
 .tablebody2 table{
-    margin-top: -40px;
-    width: 720px;
+    margin-top: -60px;
+    width: 770px;
 }
 .tablebody2 td {
     border-bottom: 1px solid #F4F4F7;
