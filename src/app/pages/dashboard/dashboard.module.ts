@@ -11,9 +11,11 @@ import { MarcasComponent } from './components/recetas/marcas/marcas.component';
 import { MercadosComponent } from './components/recetas/mercados/mercados.component';
 import { MercadosMarcasComponent } from './components/recetas/mercados-marcas/mercados-marcas.component';
 import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/neosalud-recetas.component';
+import { AppComponent } from 'src/app/app.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
     ResumenComponent,
     InretailComponent,
     NeosaludComponent,
@@ -25,11 +27,11 @@ import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/
     MercadosComponent,
     MercadosMarcasComponent,
     NeosaludRecetasComponent
-       
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    UseroptionsComponent
   ],
   providers: [],
   exports: [
@@ -41,6 +43,7 @@ import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/
     MercadosComponent,
     MercadosMarcasComponent,
     NeosaludRecetasComponent
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class DashboardModule { }
