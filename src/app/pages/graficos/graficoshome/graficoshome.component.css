@@ -101,8 +101,8 @@
   }
   
   .css {
-    background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
+    background: -webkit-linear-gradient(90deg, #009CDE 50%, #009CDE 50%);
+    background: linear-gradient(0deg, #009CDE 50%, #E8EAF3 50%);
     -webkit-transform: rotate(108deg);
         -ms-transform: rotate(108deg);
             transform: rotate(108deg);
@@ -132,7 +132,7 @@
   
   .javascript {
     background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
+    background: linear-gradient(0deg, #52E085 50%, #E8EAF3 50%);
       -webkit-transform: rotate(162deg);
         -ms-transform: rotate(162deg);
             transform: rotate(162deg);
