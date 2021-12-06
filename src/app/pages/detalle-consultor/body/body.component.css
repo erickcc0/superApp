@@ -116,7 +116,7 @@ hr{
     background: #FEEDC6;
 }
 .bg-gray-ligth{
-    color: #E2E3ED;
+    color: #E2E3ED !important;
 }
 
 .button-mas{
@@ -138,6 +138,9 @@ hr{
 
     margin-left: 740px !important;
    margin-top: 160px !important;
+}
+.izquierda{
+    text-align: left !important;
 }
 
 
@@ -192,39 +195,9 @@ hr{
     line-height: 170px;
   }
   
-  .html {
-    background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
-    -webkit-transform: rotate(72deg);
-        -ms-transform: rotate(72deg);
-            transform: rotate(72deg);
-  }
-  
-  .html:before,
-  .html:after {
-    color: #c5c5c5;
-  }
-  
-  .html:before {
-    background: white content-box;
-    -webkit-transform: rotate(-72deg);
-        -ms-transform: rotate(-72deg);
-            transform: rotate(-72deg);
-    content: "40%";
-  }
-  
-  .html:after {
-    background: -webkit-linear-gradient(transparent 50%, #111 50%);
-    background: linear-gradient(transparent 50%, white 50%);
-    content: "General";
-    -webkit-transform: rotate(-72deg) scale(1.1);
-        -ms-transform: rotate(-72deg) scale(1.1);
-            transform: rotate(-72deg) scale(1.1);
-  }
-  
   .css {
     background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
+    background: linear-gradient(0deg, #009CDE 50%, #E8EAF3 50%);
     -webkit-transform: rotate(108deg);
         -ms-transform: rotate(108deg);
             transform: rotate(108deg);
@@ -254,7 +227,7 @@ hr{
   
   .javascript {
     background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
+    background: linear-gradient(0deg, #52E085 50%, #E8EAF3 50%);
       -webkit-transform: rotate(162deg);
         -ms-transform: rotate(162deg);
             transform: rotate(162deg);
@@ -325,4 +298,13 @@ hr{
 }
 .home{
     height: 290px;
+}
+
+.div-grafica3{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    width: 150px !important;
+    height: 130px !important;
+}
+.div-grafica3 h1{
+    font-size: 17px;
 }
