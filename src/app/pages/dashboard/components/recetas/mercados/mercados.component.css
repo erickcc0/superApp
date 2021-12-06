@@ -8,19 +8,9 @@
         margin-left: 50px;
     flex-basis: 57%;
     }
-    #head{
-        border-radius: 18px;
-        overflow: hidden;
-        margin-bottom: -16px;
-    }
+
     td{
         transition: 400ms all;
-    }
-    #head thead{
-        background: #E0E2EC;
-    }
-    #head th:nth-child(1){
-        width: 60%;
     }
 
     .radiobutton{
@@ -35,19 +25,21 @@
         color: #37ADE1;
     }
  
- 
-    
-    #body{
-        margin-top: -30px;
-    }
     #body thead{
+
         background: #E0E2EC;
     }
     #body{
+        border-radius: 15px;
+        margin-top: -30px;
         align-items: center;
         justify-content: center;
         font-size: 13px;
         overflow: hidden;
+    }
+    #body table{
+        margin-bottom: -5px;
+        padding-top: 150px !important;
     }
     #body th{
         font-weight: 500;
@@ -72,7 +64,14 @@
     }
 
     
-        
+       
+    .color-azul{
+        color: #3FB4E6 !important;
+        font-weight: bold;
+    }
+    .sub{
+        margin-top: -13px;
+    }
     .bg-azul-claro{
         background: #D7F1F8;
     }

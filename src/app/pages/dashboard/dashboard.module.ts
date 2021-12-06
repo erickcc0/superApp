@@ -8,6 +8,9 @@ import { UseroptionsComponent } from './components/useroptions/useroptions.compo
 import { PerfilComponent } from './components/recetas/perfil/perfil.component';
 import { PerfilDetalleComponent } from './components/recetas/perfil-detalle/perfil-detalle.component';
 import { MarcasComponent } from './components/recetas/marcas/marcas.component';
+import { MercadosComponent } from './components/recetas/mercados/mercados.component';
+import { MercadosMarcasComponent } from './components/recetas/mercados-marcas/mercados-marcas.component';
+import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/neosalud-recetas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { MarcasComponent } from './components/recetas/marcas/marcas.component';
     ResumenComponent,
     PerfilComponent,
     PerfilDetalleComponent,
-    MarcasComponent
+    MarcasComponent,
+    MercadosComponent,
+    MercadosMarcasComponent,
+    NeosaludRecetasComponent
        
   ],
   imports: [
@@ -31,7 +37,10 @@ import { MarcasComponent } from './components/recetas/marcas/marcas.component';
     UseroptionsComponent,
     ResumenComponent,
     PerfilDetalleComponent,
-    MarcasComponent
+    MarcasComponent,
+    MercadosComponent,
+    MercadosMarcasComponent,
+    NeosaludRecetasComponent
   ]
 })
 export class DashboardModule { }
