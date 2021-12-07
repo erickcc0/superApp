@@ -7,8 +7,8 @@ import { Component, } from '@angular/core';
 })
 export class NeosaludRecetasComponent{
 
-
-  check = 'mes';
+  check:string = 'ytd';
+  
 
   constructor() { }
 
