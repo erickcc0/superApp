@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit {
   ];
 
   users: any = [];
+  ddd: any = [];
 
   constructor(
         private _userService: UserService
@@ -43,6 +44,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUser();
+    this.getDDD();
   }
 
 
@@ -51,8 +53,18 @@ export class HomeComponent implements OnInit {
           .toPromise().then(
             (response: any) => {
               this.users = response;
-              console.table(this.users);
+              console.log(this.users);
             }
           );
+    }
+
+    getDDD(): void {
+      this._userService.getDDD()
+        .toPromise().then(
+          (response: any) => {
+            this.ddd = response.exam_notes;
+            console.log(this.ddd);
+          }
+        );
     }
 }
