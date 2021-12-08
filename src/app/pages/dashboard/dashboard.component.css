@@ -39,8 +39,9 @@ color: black;
 }
   
 
-#sidebar a:hover {
-    color: #009CDE;
+#sidebar li:hover a {
+  transition: color 300ms;
+   color: #009CDE;
 }
 
 

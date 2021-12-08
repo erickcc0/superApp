@@ -12,6 +12,9 @@ import { MercadosComponent } from './components/recetas/mercados/mercados.compon
 import { MercadosMarcasComponent } from './components/recetas/mercados-marcas/mercados-marcas.component';
 import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/neosalud-recetas.component';
 import {FormsModule } from '@angular/forms';
+import { DetalleComponent } from './components/neosalud/detalle/detalle.component';
+import { DxChartModule } from 'devextreme-angular';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,18 @@ import {FormsModule } from '@angular/forms';
     MercadosComponent,
     MercadosMarcasComponent,
     NeosaludRecetasComponent,
+    DetalleComponent,
   ],
   imports: [
+    BrowserModule,
+    DxChartModule,
     FormsModule,
     CommonModule,
     HttpClientModule
   ],
   providers: [],
   exports: [
+    NeosaludComponent,
     PerfilComponent,
     UseroptionsComponent,
     ResumenComponent,
