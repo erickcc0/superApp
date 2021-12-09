@@ -74,12 +74,21 @@
                     </div>
 
                 </div>
-                <tr>
+                <tr *ngFor="let consulta of neosalud">
+                    <td>{{consulta.prodnom}} </td>
+                    <td>{{consulta.YTD_ANT}} </td>
+                    <td>{{consulta.YTD_ACT}}</td>
+                    <td style="color:#F72E54 !important;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> <strong>{{consulta.CREC}} %</strong></td>
+                    <td><i class="fas fa-chevron-down"></i></td>
+                    
+                </tr>
+                <!-- <tr>
                     <td>VOLUSOL</td>
                     <td>4,724</td>
                     <td>4,724</td>
-                    <td style="color:#FCD657 !important;"><img src="../../../../../assets/recursos/Ellipse 109.png" alt=""> <strong>4.3%</strong></td>
+                    <td style="color:#FCD657 !important;"><img src="../../../../../assets/recursos/Ellipse 109.png" alt=""> <strong></strong></td>
                     <td><i class="fas fa-chevron-down"></i></td>
+                    
                 </tr>
                 <tr>
                     <td>VOLUSOL</td>
@@ -108,14 +117,7 @@
                     <td>4,724</td>
                     <td style="color:#F72E54 !important;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> <strong>4.3%</strong></td>
                     <td><i class="fas fa-chevron-down"></i></td>
-                </tr>
-                <tr>
-                    <td>VOLUSOL</td>
-                    <td>4,724</td>
-                    <td>4,724</td>
-                    <td style="color:#F72E54 !important;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> <strong>4.3%</strong></td>
-                    <td><i class="fas fa-chevron-down"></i></td>
-                </tr>
+                </tr> -->
 
 
             </tbody>
