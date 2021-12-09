@@ -12,9 +12,9 @@ import { MercadosComponent } from './components/recetas/mercados/mercados.compon
 import { MercadosMarcasComponent } from './components/recetas/mercados-marcas/mercados-marcas.component';
 import { NeosaludRecetasComponent } from './components/recetas/neosalud-recetas/neosalud-recetas.component';
 import {FormsModule } from '@angular/forms';
-import { DetalleComponent } from './components/neosalud/detalle/detalle.component';
-import { DxChartModule } from 'devextreme-angular';
+import { DxChartModule,DxSelectBoxModule } from 'devextreme-angular';
 import { BrowserModule } from '@angular/platform-browser';
+import { DetalleNeosaludComponent } from './components/neosalud/detalle-neosalud/detalle-neosalud.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +29,15 @@ import { BrowserModule } from '@angular/platform-browser';
     MercadosComponent,
     MercadosMarcasComponent,
     NeosaludRecetasComponent,
-    DetalleComponent,
+    DetalleNeosaludComponent
   ],
   imports: [
     BrowserModule,
     DxChartModule,
     FormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    DxSelectBoxModule
   ],
   providers: [],
   exports: [

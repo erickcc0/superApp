@@ -107,3 +107,27 @@
 #table-neosalud th:nth-child(4){
     width: 20%;
 }
+
+.block{
+    display:none !important;
+}
+.block2{
+    display:block !important;
+}
+.graficos-detalle{
+    background: white;
+    width: 300px;
+    height: 460px;
+}
+.gd{
+    width: 700px;
+    height: 500px;
+}
+.pointer{
+    transition: all 200ms;
+    background: #D7F1F8;
+}
+
+#graficos-neosalud{
+    display: none;
+}

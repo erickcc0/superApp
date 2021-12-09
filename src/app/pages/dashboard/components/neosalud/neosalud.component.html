@@ -26,7 +26,7 @@
             </table>
         </div>
     </div>
-    <div id="grafico-barras">
+    <div #as id="grafico-barras" class="animate__animated animate__fadeIn animate__fast">
         <div class="barras">
             <dx-chart id="chart" [dataSource]="grossProductData" (onPointClick)="onPointClick($event)">
                 <dxi-series valueField="year2018" name="2018" color="#8064A2"></dxi-series>
@@ -46,6 +46,7 @@
             </dx-chart>
         </div>
     </div>
+    <br>
     <div id="table-neosalud">
         <table class="bg-white table table-borderless table-hover">
             <thead>
@@ -58,14 +59,21 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody >
+                <tr #pointer>
                     <td>VOLUSOL</td>
                     <td>4,724</td>
                     <td>4,724</td>
                     <td style="color:#3ACC9D !important;"><img src="../../../../../assets/recursos/Group 816.png" alt=""> <strong>15.3%</strong></td>
-                    <td><i class="fas fa-chevron-down"></i></td>
+                    <td  (click)="detalle()" style="cursor: pointer;"><i class="fas fa-chevron-down"></i>
+                    </td>
                 </tr>
+                <div #graficos id="graficos-neosalud" class="graficos-detalle animate__animated animate__fadeIn animate__fast">
+                    <div class="gd">
+                        <app-detalle-neosalud></app-detalle-neosalud>
+                    </div>
+
+                </div>
                 <tr>
                     <td>VOLUSOL</td>
                     <td>4,724</td>
@@ -108,7 +116,7 @@
                     <td style="color:#F72E54 !important;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> <strong>4.3%</strong></td>
                     <td><i class="fas fa-chevron-down"></i></td>
                 </tr>
-                
+
 
             </tbody>
         </table>
