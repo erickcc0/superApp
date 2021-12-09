@@ -31,8 +31,8 @@
     <table id="body">
     
         <tbody>
-            <tr>
-                <th>Ana Romero Inojosa </th>
+            <tr *ngFor="let last of home">
+                <th>{{last.data.coverage_general}} </th>
                 <td class="arrow"><i class="fas fa-arrow-up"></i>104</td>
                 <td></td>
                 <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>

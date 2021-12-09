@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../../dashboard/services/home.service';
 
 
 @Component({
@@ -8,13 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+  home:any[] = [];
 
+  constructor(private _HomeService:HomeService) { }
 
-  constructor() {
+  requestHome(){
+    this._HomeService.ResultLastMont()
+    .subscribe(resp=>{
+      this.home = resp;
+      console.log(this.home);
+             
+    },(err) =>{
+      console.log(err);
+      this.home=[];
+      
+    });
   }
 
   ngOnInit(): void {
-    
+    this.requestHome();
   }
 
 }
