@@ -1,0 +1,139 @@
+/* General */
+#table-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #table-perfil .perfil {
+    margin-left: 50px;
+    flex-basis: 57%;
+}
+/* Fin General */
+
+/* Atras */
+.atras span{
+    padding: 3px;
+    margin-left: 10px;
+    font-size: 17px;
+    border: 0.5 solid #ddd;
+    background: white;
+    color: #105A76;
+}
+/* Fin de atras */
+/* Primer segmento */
+.sec{
+    border-radius: 16px;
+    background: white;
+    width: 100%;
+}
+.uno{
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sec1{
+    height: 150px;
+    flex-basis: 40%;
+}
+
+.sec2{
+    height: 150px;
+    flex-basis: 60%;
+}
+.headt{
+    margin-top: 25px;
+    margin-bottom: -20px;
+    font-size: 12px;
+}
+.headt th{
+    color:#5F91A3 ;
+}
+.headt th:nth-child(1){
+    width: 27%;
+}
+
+.headb{
+    font-size: 13px;
+    height: 40px;
+    margin-left: 15px;
+    width: 300px;
+    background: #3ACC6E;
+    border-radius:18px;
+    border: 1px solid #3ACC6E;
+}
+.headb td{
+    color: white;
+}
+
+#chart-demo{
+    margin-left: 35px;
+    margin: 0px auto;
+    align-items: center;
+    width: 92%;
+}
+
+#chart-demo dx-chart{
+    width: 92%;
+    height: 150px;
+}
+
+/* Fin del primer segmento */
+/* Segundo segmento */
+.table1{
+    margin-top: 18px;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 14px;
+    width: 410px;
+}
+.table1 thead{
+    background: #E0E2EC;
+}
+.table1 th{
+    color: #54869C;
+}
+.table1 td{
+    color: #78A2B2;
+}
+/* Fin del segundo segmento */
+/* Tercer Segmento */
+.tres{
+    height: 370px;
+}
+#chart{   
+    margin-top: 15px;
+    margin: 0px auto;
+    width: 60%;
+    height: 370px;
+}
+
+/* Fin del tercer segmento */
+
+/*Ultimo Segmento*/
+.tabla4 {
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.tabla4 td,th{
+    padding-left: 15px;
+}
+.tabla4 table{
+
+    font-size: 13px;
+    background: white;
+}
+.tabla4 thead{
+    background: #E0E2EC;
+}
+.tabla4 td{
+    color: #6796A9;
+}
+.tabla4 th{
+    color:#5F91A3 ;
+}
+
+
+/*Fin del Ultimo Segmento*/

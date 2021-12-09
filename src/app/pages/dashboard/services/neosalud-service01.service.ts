@@ -16,7 +16,6 @@ export class NeosaludService01Service {
 
   
   ConsultaNeosaludById():Observable<neosalud[]>{
-    
     const url= `${this.apiUrl}`;
    return this.http.get<neosalud[]>(url);
 
