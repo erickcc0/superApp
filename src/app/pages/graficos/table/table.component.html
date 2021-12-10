@@ -31,72 +31,20 @@
     <table id="body">
     
         <tbody>
-            <tr *ngFor="let last of home">
-                <th>{{last.data.coverage_general}} </th>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>104</td>
-                <td></td>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
-                <td >50%</td>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>98</td>
-                <td></td>
-                <td>96.80%</td>
-                <td>100%</td>
-                <td>18.6</td>
-                <td> </td>
+            <tr *ngFor="let item of table_data?.data">
+              <th>{{item.consultant}}</th>
+              <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.ddd_evo_count}}</td>
+              <td>{{item.ddd_brand_count}}</td>
+              <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.ddd_crec_no_count}}</td>
+              <td>{{item.recipe_brand_no_count}}</td>
+              <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.recipe_evo}}</td>
+              <td>{{item.recipe_brands}}</td>
+              <td>{{item.coverage_general}}</td>
+              <td>{{item.coverage_vip}}</td>
+              <td>{{item.coverage_note}}</td>
+              <td>{{item.coverage_general}}</td>
             </tr>
-            <tr>
-                <th>Ana Romero Inojosa </th>
-                <td class="arrow-red"><i class="fas fa-arrow-down"></i>104</td>
-                <td></td>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
-                <td>50%</td>
-                <td class="arrow"> <i class="fas fa-arrow-up"></i>98</td>
-                <td></td>
-                <td>96.80%</td>
-                <td>100%</td>
-                <td>18.6</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <th>Ana Romero Inojosa </th>
-                <td class="circle"><i class="fas fa-circle"></i>104</td>
-                <td></td>
-                <td class="circle"><i class="fas fa-circle"></i>50%</td>
-                <td>50%</td>
-                <td class="circle"><i class="fas fa-circle"></i>98</td>
-                <td></td>
-                <td>96.80%</td>
-                <td>100%</td>
-                <td>18.6</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <th>Ana Romero Inojosa </th>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>104</td>
-                <td></td>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
-                <td>50%</td>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>98</td>
-                <td></td>
-                <td>96.80%</td>
-                <td>100%</td>
-                <td>18.6</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <th>Ana Romero Inojosa </th>
-                <td class="arrow-red"><i class="fas fa-arrow-down"></i>104</td>
-                <td></td>
-                <td class="arrow"><i class="fas fa-arrow-up"></i>50%</td>
-                <td>50%</td>
-                <td class="circle"><i class="fas fa-circle"></i>98</td>
-                <td></td>
-                <td>96.80%</td>
-                <td>100%</td>
-                <td>18.6</td>
-                <td> </td>
-            </tr>
-        </tbody>
+          </tbody>
     
     </table> 
 

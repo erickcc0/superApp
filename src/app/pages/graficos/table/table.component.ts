@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../../dashboard/services/home.service';
+import { GeneralService } from 'src/app/services/general.service';
 
 
 @Component({
@@ -9,27 +9,22 @@ import { HomeService } from '../../dashboard/services/home.service';
 })
 export class TableComponent implements OnInit {
 
-  home:any[] = [];
+  table_data: any;
 
-  constructor(private _HomeService:HomeService) { }
+  constructor( private generalService:GeneralService) {
+    this.generalService.getResultsLastMonth().toPromise().then(
+      (response: any) => {
+        console.log('response++:', response)
+        this.table_data = response;
+      }
+    );
+  }
 
   requestHome(){
-    this._HomeService.ResultLastMont()
-    .subscribe(resp=>{
-      this.home = resp;
-      console.log(this.home);
-             
-    },(err) =>{
-      console.log(err);
-      this.home=[];
-      
-    });
   }
 
   ngOnInit(): void {
-    this.requestHome();
   }
-
 }
   
 

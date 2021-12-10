@@ -1,26 +1,14 @@
 
 <app-useroptions id="user-options"></app-useroptions>
-
-    <div id="sidebar" >
-        <!-- <div class="toggle-btn" (click)="openNavbar()">
-          <span><i class="fas fa-bars" ></i></span> 
-        </div> -->
-        <ul>
-          <!-- <li>
-            <img src="https://media.discordapp.net/attachments/907817980803555378/916001300880187472/unknown.png" 
-            alt="Logo Fazt" 
-            class="logo">
-          </li> -->
-          <li><strong><a href="">Recetas</a></strong></li>
-          <li><strong><a href="">DDD</a> </strong></li>
-          <li><strong><a href="">Neosalud</a></strong></li>
-          <li><strong><a href="">Inretail</a></strong></li>
-        </ul>
-
-</div>
+<app-nav-dashboard></app-nav-dashboard>
 
 <br><br><br>
-<app-detalle-inretail></app-detalle-inretail>
+
+<router-outlet></router-outlet>
+
+
+
+<!-- <app-detalle-inretail></app-detalle-inretail>
 <app-inretail></app-inretail>
 <app-neosalud></app-neosalud>
 <app-resumen></app-resumen>
@@ -29,7 +17,7 @@
 <app-mercados></app-mercados>
 <app-marcas></app-marcas>
 <app-perfil-detalle></app-perfil-detalle>
-<app-perfil></app-perfil>
+<app-perfil></app-perfil> -->
 
 
 

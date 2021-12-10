@@ -16,7 +16,6 @@ import { DxChartModule,DxSelectBoxModule } from 'devextreme-angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { DetalleNeosaludComponent } from './components/neosalud/detalle-neosalud/detalle-neosalud.component';
 import { DetalleInretailComponent } from './components/inretail/detalle-inretail/detalle-inretail.component';
-
 @NgModule({
   declarations: [
     ResumenComponent,
@@ -34,6 +33,7 @@ import { DetalleInretailComponent } from './components/inretail/detalle-inretail
     DetalleInretailComponent
   ],
   imports: [
+    
     BrowserModule,
     DxChartModule,
     FormsModule,
@@ -43,6 +43,7 @@ import { DetalleInretailComponent } from './components/inretail/detalle-inretail
   ],
   providers: [],
   exports: [
+    
     InretailComponent,
     NeosaludComponent,
     PerfilComponent,

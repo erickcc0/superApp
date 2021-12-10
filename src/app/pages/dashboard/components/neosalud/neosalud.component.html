@@ -28,11 +28,11 @@
     </div>
     <div #as id="grafico-barras" class="animate__animated animate__fadeIn animate__fast">
         <div class="barras">
-            <dx-chart id="chart" [dataSource]="grossProductData" (onPointClick)="onPointClick($event)">
-                <dxi-series valueField="year2018" name="2018" color="#8064A2"></dxi-series>
-                <dxi-series valueField="year2017" name="2017" color="#E6E0EC"></dxi-series>
+            <dx-chart id="chart" [dataSource]="neosalud" (onPointClick)="onPointClick($event)">
+                <dxi-series valueField="YTD_ANT" name="YTD_ANT" color="#8064A2"></dxi-series>
+                <dxi-series valueField="YTD_ACT" name="YTD_ACT" color="#E6E0EC"></dxi-series>
     
-                <dxo-common-series-settings argumentField="state" type="bar" hoverMode="allArgumentPoints"
+                <dxo-common-series-settings argumentField="prodnom" type="bar" hoverMode="allArgumentPoints"
                     selectionMode="allArgumentPoints">
                     <dxo-label [visible]="true" [format]="{
                   type: 'fixedPoint',

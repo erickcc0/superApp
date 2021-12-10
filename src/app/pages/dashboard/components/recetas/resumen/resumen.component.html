@@ -45,16 +45,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>N07X0</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
+                    <tr *ngFor="let tabla1 of mercado">
+                        <td>{{tabla1.clasecod}}</td>
+                        <td>{{tabla1.YTD_ANT_MED}}</td>
+                        <td>{{tabla1.YTD_ACT_MED}}</td>
+                        <td>{{tabla1.MS_ANT_MED}}</td>
+                        <td>{{tabla1.MS_ACT_MED}}</td>
+                        <td class="arrow"><i class="fas fa-arrow-up"></i>{{tabla1.EVO_MED}}</td>
                         <td><i class="fas fa-chevron-right"></i></td>
                     </tr>
-                    <tr>
+
+                    <!-- <tr>
                         <td>N07X0</td>
                         <td>2785</td>
                         <td>3144</td>
@@ -63,43 +64,7 @@
                         <td class="arrow-red"><i class="fas fa-arrow-down"></i>100</td>
                         <td><i class="fas fa-chevron-right"></i></td>
                     </tr>
-                    <tr>
-                        <td>N07X0</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>N07X0</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>N07X0</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>N07X0</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    
+                -->
                 </tbody>
     
             </table>
@@ -126,78 +91,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
+                    <tr *ngFor="let tabla2 of marcas">
+                        <td>{{tabla2.prodnom}}</td>
+                        <td>{{tabla2.YTD_ANT_PROD}}</td>
+                        <td>{{tabla2.YTD_ACT_PROD}}</td>
+                        <td>{{tabla2.MS_ANT_PROD}}</td>
+                        <td>{{tabla2.MS_ACT_PROD}}</td>
+                        <td class="arrow"><i class="fas fa-arrow-up"></i>{{tabla2.EVO_PROD}}</td>
                         <td><i class="fas fa-chevron-right"></i></td>
                     </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
-                    <tr>
-                        <td>PREGOVIN</td>
-                        <td>2785</td>
-                        <td>3144</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td class="arrow"><i class="fas fa-arrow-up"></i>100</td>
-                        <td><i class="fas fa-chevron-right"></i></td>
-                    </tr>
+                
                 </tbody>
     
             </table>

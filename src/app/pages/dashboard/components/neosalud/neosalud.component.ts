@@ -24,9 +24,10 @@ export class NeosaludComponent implements OnInit{
   consultar(){
     this._consultaNeosalud.ConsultaNeosaludById()
     .subscribe(resp=>{
-     // console.log(resp);
       this.neosalud = resp;
-      this.neosalud = this.neosalud.splice(0, 10);
+      this.neosalud = this.neosalud.splice(0, 8);
+      console.table(this.neosalud);
+      
              
     },(err) =>{
     //  console.log(err);

@@ -59,6 +59,7 @@ import { BodyComponent } from './pages/detalle-consultor/body/body.component';
     DashboardRoutingModule
   ],
   exports:[
+    TableComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

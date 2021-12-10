@@ -7,14 +7,15 @@ import { Observable} from 'rxjs';
 })
 export class HomeService {
 
-  private apiUrl:string = 'https://cawjhjx0fj.execute-api.us-east-1.amazonaws.com/summary/ROJASAL/last_months_results/ANFOSLX?limit=10&page=1&sort=desc';
+  private apiUrl:string = 'https://cawjhjx0fj.execute-api.us-east-1.amazonaws.com/';
 
   constructor( private http: HttpClient ) { 
 
   }
   ResultLastMont():Observable<any[]>{
+    let headers = 'summary/ROJASAL/last_months_results/ANFOSLX?limit=10&page=1&sort=desc'
 
-    const url= `${this.apiUrl}`;
+    const url= `${this.apiUrl}+${headers}`;
    return this.http.get<any[]>(url);
 
   }
