@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InretailService } from 'src/app/services/inretail.service';
 
 @Component({
   selector: 'app-detalle-inretail',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalle-inretail.component.css']
 })
 export class DetalleInretailComponent implements OnInit {
+
+  ordenar1: string[] = ['Evo mayor a menor', 'Evo menor a mayor'];
+  seleccionado:string[]=[];
 
   // Grafica 1
 
@@ -72,9 +76,36 @@ export class DetalleInretailComponent implements OnInit {
   // Fin de Grafica 2
 // *********************************************
 
-  constructor() { }
+  public distritos: any = [];
+  public mercados: any = [];
+
+  constructor(
+    private _inretailService: InretailService
+  ) { }
 
   ngOnInit(): void {
+    this.getDistritos();
+    this.getMercados();
+  }
+
+  getDistritos(): void {
+    this._inretailService
+      .getDistritos().subscribe(
+        resp => {
+          this.distritos = resp;
+          console.log(this.distritos);
+        }
+      );
+  }
+
+  getMercados(): void {
+    this._inretailService
+      .getMercados().subscribe(
+        resp => {
+          this.mercados = resp;
+          console.log(this.mercados);
+        }
+      );
   }
 
 }

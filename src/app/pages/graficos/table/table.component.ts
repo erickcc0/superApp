@@ -12,7 +12,7 @@ export class TableComponent implements OnInit {
   table_data: any;
 
   constructor( private generalService:GeneralService) {
-    this.generalService.getResultsLastMonth().toPromise().then(
+    this.generalService.getResultsLastMonth('ROJASAL').toPromise().then(
       (response: any) => {
         console.log('response++:', response)
         this.table_data = response;

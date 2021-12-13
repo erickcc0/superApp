@@ -2,176 +2,175 @@
     margin-top: 30px;
     padding: 20px;
     background: white;
-    width: 80%;
-    height: 265px;
+    width: 1088px;
+    height: 289px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 20px;
+    border-radius: 10px;
     padding-left: 6%;
     display: flex;
   }
 
   h1 {
     margin-left: -100px;
-    font-size: 17px;
+    font-size: 20px;
     text-align: center;
     color: #145D78;
   }
   h1 span{
     margin-left: 160px;
   }
-  
-  .skills-container {
-    margin-top: 2em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-  
-  .circular-progress {
-    margin: auto;
-    position: relative;
-  }
-  
-  /* Tamaño */
-  .circular-progress,
-  .circular-progress:before,
-  .circular-progress:after {
-    width: 137px;
-    height: 137px;
-    border-radius: 50%;
-  }
-  
-  .circular-progress:before,
-  .circular-progress:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  /* Porcentaje */
-  .circular-progress:before {
-    padding: .5em;
-    line-height: 80px;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  /* Texto */
-  .circular-progress:after {
-    font-size: .8rem;
-    font-weight: normal;
-    *text-transform: uppercase;
-    line-height: 170px;
-  }
-  
-  .html {
-    background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
-    -webkit-transform: rotate(72deg);
-        -ms-transform: rotate(72deg);
-            transform: rotate(72deg);
-  }
-  
-  .html:before,
-  .html:after {
-    color: #c5c5c5;
-  }
-  
-  .html:before {
-    background: white content-box;
-    -webkit-transform: rotate(-72deg);
-        -ms-transform: rotate(-72deg);
-            transform: rotate(-72deg);
-    content: "40%";
-  }
-  
-  .html:after {
-    background: -webkit-linear-gradient(transparent 50%, #111 50%);
-    background: linear-gradient(transparent 50%, white 50%);
-    content: "General";
-    -webkit-transform: rotate(-72deg) scale(1.1);
-        -ms-transform: rotate(-72deg) scale(1.1);
-            transform: rotate(-72deg) scale(1.1);
-  }
-  
-  .css {
-    background: -webkit-linear-gradient(90deg, #009CDE 50%, #009CDE 50%);
-    background: linear-gradient(0deg, #009CDE 50%, #E8EAF3 50%);
-    -webkit-transform: rotate(108deg);
-        -ms-transform: rotate(108deg);
-            transform: rotate(108deg);
-  }
-  
-  .css:before,
-  .css:after {
-    color: #c5c5c5;
-  }
-  
-  .css:before {
-    background: white content-box;
-    -webkit-transform: rotate(-108deg);
-        -ms-transform: rotate(-108deg);
-            transform: rotate(-108deg);
-    content: "60%";
-  }
-  
-  .css:after {
-    background: -webkit-linear-gradient(transparent 50%, white 50%);
-    background: linear-gradient(transparent 50%, white 50%);
-    content: "General";
-    -webkit-transform: rotate(-108deg) scale(1.1);
-        -ms-transform: rotate(-108deg) scale(1.1);
-            transform: rotate(-108deg) scale(1.1);
-  }
-  
-  .javascript {
-    background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
-    background: linear-gradient(0deg, #52E085 50%, #E8EAF3 50%);
-      -webkit-transform: rotate(162deg);
-        -ms-transform: rotate(162deg);
-            transform: rotate(162deg);
-  }
-  
-  .javascript:before,
-  .javascript:after {
-    color: #c5c5c5;
-  }
-  
-  .javascript:before {
-    background: white content-box;
-    -webkit-transform: rotate(-162deg);
-        -ms-transform: rotate(-162deg);
-            transform: rotate(-162deg);
-    content: "90%";
-  }
-  
-  .javascript:after {
-    background: -webkit-linear-gradient(transparent 50%, white 50%);
-    background: linear-gradient(transparent 50%, white 50%);
-    content: "VIP";
-    -webkit-transform: rotate(-162deg) scale(1.1);
-        -ms-transform: rotate(-162deg) scale(1.1);
-            transform: rotate(-162deg) scale(1.1);
-  }
+ 
+.skills-container {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 
+.circular-progress {
+  margin: auto;
+  position: relative;
+}
+
+/* Tamaño */
+.circular-progress,
+.circular-progress:before,
+.circular-progress:after {
+  width: 137px;
+  height: 137px;
+  border-radius: 50%;
+}
+
+.circular-progress:before,
+.circular-progress:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Porcentaje */
+.circular-progress:before {
+  padding: .5em;
+  line-height: 80px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Texto */
+.circular-progress:after {
+  font-size: .8rem;
+  font-weight: normal;
+  *text-transform: uppercase;
+  line-height: 170px;
+}
+
+.html {
+  background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
+  background: linear-gradient(0deg, #00C2E8 50%, #E8EAF3 50%);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.html:before,
+.html:after {
+  color: #c5c5c5;
+}
+
+.html:before {
+  background: white content-box;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  content: "105 %";
+}
+
+.html:after {
+  background: -webkit-linear-gradient(transparent 50%, #111 50%);
+  background: linear-gradient(transparent 50%, white 50%);
+  content: "General";
+  -webkit-transform: rotate(-180deg) scale(1.1);
+  -ms-transform: rotate(-180deg) scale(1.1);
+  transform: rotate(-180deg) scale(1.1);
+}
+
+.css {
+  background: -webkit-linear-gradient(90deg, #009CDE 50%, #009CDE 50%);
+  background: linear-gradient(0deg, #009CDE 50%, #E8EAF3 50%);
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.css:before,
+.css:after {
+  color: #c5c5c5;
+}
+
+.css:before {
+  background: white content-box;
+  -webkit-transform: rotate(-150deg);
+  -ms-transform: rotate(-150deg);
+  transform: rotate(-150deg);
+  content: "84 %";
+}
+
+.css:after {
+  background: -webkit-linear-gradient(transparent 50%, white 50%);
+  background: linear-gradient(transparent 50%, white 50%);
+  content: "General";
+  -webkit-transform: rotate(-150deg) scale(1.1);
+  -ms-transform: rotate(-150deg) scale(1.1);
+  transform: rotate(-150deg) scale(1.1);
+}
+
+.javascript {
+  background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
+  background: linear-gradient(0deg, #52E085 50%, #E8EAF3 50%);
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.javascript:before,
+.javascript:after {
+  color: #c5c5c5;
+}
+
+.javascript:before {
+  background: white content-box;
+  -webkit-transform: rotate(-150deg);
+  -ms-transform: rotate(-150deg);
+  transform: rotate(-150deg);
+  content: "84 %";
+}
+
+.javascript:after {
+  background: -webkit-linear-gradient(transparent 50%, white 50%);
+  background: linear-gradient(transparent 50%, white 50%);
+  content: "VIP";
+  -webkit-transform: rotate(-150deg) scale(1.1);
+  -ms-transform: rotate(-150deg) scale(1.1);
+  transform: rotate(-150deg) scale(1.1);
+} 
 
 
   #pie{
     margin-left: -70px;
     width: 500px;
-    *border: 1px solid black;
   }
 
   #tabla{
     margin-left: 40px;
     margin-top: -10px;
-    *border: 1px solid black;
     width: 470px;
     height: 150px;
   }
@@ -180,15 +179,12 @@
     width: 500px;
     height: 250px;
   }
-  ::ng-deep .long-title h3 {
-    font-weight: normal;
+  ::ng-deep .long-title h1 {
   padding-top: 10px;
   padding-bottom: -20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #1F647F;
-    font-size: 17px;
-    font-weight: bold;
-    text-align: center;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
     margin-bottom: 20px;
     margin-bottom: -25px;
   }

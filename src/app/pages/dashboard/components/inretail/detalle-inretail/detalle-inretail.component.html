@@ -1,7 +1,17 @@
 <div id="table-perfil">
     <div class="perfil">
-        <div class="atras">
-            <h1><img src="../../../../../../assets/recursos/Group 470.png" alt=""> <span>VOLUSQL</span></h1>
+        <div class="atras">  
+            <div>
+                <img src="../../../../../../assets/recursos/Group 470.png" alt=""> 
+            </div>
+            
+            <select name="" class="form-select" id="seleccion">
+                <option value=""><p>VOLUSOL</p></option>
+            </select>
+            <!-- <select class="form-select" id="estado" formControlName="estado">
+                <option *ngFor="let ordeno of ordenar1" [value]="seleccionado">{{ordeno}}</option><i
+                    class="fas fa-caret-down"></i>
+            </select> -->
         </div>
         <div class="sec uno">
             <div class="sec1">
@@ -12,7 +22,7 @@
                                 <th></th>
                                 <th>YTD ANT</th>
                                 <th>YTD ACT</th>
-                                <th>CREC</th>
+                                <th><img src="../../../../../assets/recursos/Path 2386.png" alt=""> CREC</th>
                             </tr>
                         </thead>
                     </table>
@@ -69,56 +79,40 @@
 
         </div>
         <div class="table1">
-            <table class="table table-borderless bg-white">
+            <table class="table table-borderless bg-white table-hover">
                 <thead>
                     <tr>
-                        <th><img src="../../../../../assets/recursos/711170.png" alt=""> DISTRITO</th>
+                        <th>
+                            <img src="../../../../../assets/recursos/711170.png" alt=""> 
+                            DISTRITO
+                        </th>
                         <th>YTD ANT</th>
                         <th>YTD ACT</th>
-                        <th>CREC</th>
+                        <th><img src="../../../../../assets/recursos/Path 2386.png" alt=""> CREC</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngFor="let distrito of distritos">
                     <tr>
-                        <td style="color: black !important; font-weight: bold;">TOTAL</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
+                        <td>
+                            {{distrito.distrito}}
+                        </td>
+                        <td>{{distrito.YTD_ANT | number}}</td>
+                        <td>{{distrito.YTD_ACT | number}}</td>
+                        <td style="color: red; font-weight: bold;">
+                            <img src="../../../../../assets/recursos/Group 1130.png" alt=""> 
+                            {{distrito.CREC | number}}
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="sec tres">
             <div class="barras">
-                <dx-chart id="chart" [dataSource]="grossProductData" (onPointClick)="onPointClick($event)">
-                    <dxi-series valueField="year2018" name="2018" color="#009CDE"></dxi-series>
-                    <dxi-series valueField="year2017" name="2017" color="#ABE8F7"></dxi-series>
+                <dx-chart id="chart" [dataSource]="distritos" (onPointClick)="onPointClick($event)">
+                    <dxi-series valueField="YTD_ANT" name="YTD_ANT" color="#009CDE"></dxi-series>
+                    <dxi-series valueField="YTD_ACT" name="YTD_ACT" color="#ABE8F7"></dxi-series>
         
-                    <dxo-common-series-settings argumentField="state" type="bar" hoverMode="allArgumentPoints"
+                    <dxo-common-series-settings argumentField="distrito" type="bar" hoverMode="allArgumentPoints"
                         selectionMode="allArgumentPoints">
                         <dxo-label [visible]="true" [format]="{
                       type: 'fixedPoint',
@@ -140,62 +134,36 @@
                             <th>LOCALES</th>
                             <th>YTD ANT</th>
                             <th>YTD ACT</th>
-                            <th>CREC</th>
+                            <th><img src="../../../../../assets/recursos/Path 2386.png" alt=""> CREC</th>
                             <th>MES ANT</th>
                             <th>MES ACT</th>
-                            <th>CREC</th>
+                            <th><img src="../../../../../assets/recursos/Path 2386.png" alt=""> CREC</th>
                             <th>DREM <br> PROM 6M</th>
                             <th>INV</th>
                             <th>MESES</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody *ngFor="let mercado of mercados">
                         <tr>
-                            <td>Lorem</td>
-                            <td>7,521,587</td>
-                            <td>4,528</td>
-                            <td style="color:#49D079;"><img src="../../../../../../assets/recursos/Group 816.png" alt=""><strong> 3.1%</strong></td>
-                            <td>124</td>
-                            <td>456</td>
-                            <td style="color: red;"><img src="../../../../../../assets/recursos/Group 1130.png" alt=""><strong> 3.1%</strong></td>
-                            <td>567</td>
-                            <td>1.524</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem</td>
-                             <td>7,521,587</td>
-                            <td>4,528</td>
-                            <td style="color:#49D079;"><img src="../../../../../../assets/recursos/Group 816.png" alt=""><strong> 3.1%</strong></td>
-                            <td>124</td>
-                            <td>456</td>
-                            <td style="color: red;"><img src="../../../../../../assets/recursos/Group 1130.png" alt=""><strong> 3.1%</strong></td>
-                            <td>567</td>
-                            <td>1.524</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem</td>
-                            <td>7,521,587</td>
-                            <td>4,528</td>
-                            <td style="color:#49D079;"><img src="../../../../../../assets/recursos/Group 816.png" alt=""><strong> 3.1%</strong></td>
-                            <td>124</td>
-                            <td>456</td>
-                            <td style="color: red;"><img src="../../../../../../assets/recursos/Group 1130.png" alt=""><strong> 3.1%</strong></td>
-                            <td>567</td>
-                            <td>1.524</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem</td>
-                            <td>7,521,587</td>
-                            <td>4,528</td>
-                            <td style="color:#49D079;"><img src="../../../../../../assets/recursos/Group 816.png" alt=""><strong> 3.1%</strong></td>
-                            <td>124</td>
-                            <td>456</td>
-                            <td style="color: red;"><img src="../../../../../../assets/recursos/Group 1130.png" alt=""><strong> 3.1%</strong></td>
-                            <td>567</td>
-                            <td>1.524</td>
+                            <td>{{mercado.CT}}</td>
+                            <td>{{mercado.YTD_ANT | number}}</td>
+                            <td>{{mercado.YTD_ACT | number}}</td>
+                            <td style="color:#49D079;">
+                                <img src="../../../../../../assets/recursos/Group 816.png" alt="">
+                                <strong> 
+                                    {{mercado.CREC_YTD | number}}
+                                </strong>
+                            </td>
+                            <td>{{mercado.MES_ANT | number}}</td>
+                            <td>{{mercado.MES_ACT | number}}</td>
+                            <td style="color: red;">
+                                <img src="../../../../../../assets/recursos/Group 1130.png" alt="">
+                                <strong> 
+                                    {{mercado.CREC_MES}}
+                                </strong>
+                            </td>
+                            <td>{{mercado.EVO_MES | number}}</td>
+                            <td>{{mercado.CREC_YTD | number}}</td>
                             <td>3</td>
                         </tr>
                     </tbody>

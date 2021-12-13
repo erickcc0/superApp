@@ -50,13 +50,19 @@ export class GeneralService {
       );
   }
 
-  getResultsLastMonth(): Observable<any> {
+  getResultsLastMonth(idSupervisor:string): Observable<any> {
     return this.http
-      .get(this.url_base + 'summary/ROJASAL/last_months_results/ANDRADC?limit=10&page=1&sort=desc', this.headers)
+
+
+      .get(this.url_base + 'summary/'+idSupervisor+'/last_months_results/?limit=50&page=1&sort=desc', this.headers)
       .pipe(
         catchError((e) => {
           return this.functionForError(e, 'Error al traer al getResultsLastMonth')
         })
       );
   }
+  
 }
+
+
+

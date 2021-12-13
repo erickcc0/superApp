@@ -3,14 +3,14 @@
 .titulo{ 
     margin-bottom: 18px;
     border-radius: 15px;
-    height: 50px;
+    height: 52px;
 }
 .titulo h1{
     font-weight: bold;
     padding-left: 20px;
-    line-height: 50px;
+    line-height: 52px;
     color: #009CDE;
-    font-size: 19px;
+    font-size: 16px;
 }
 /* Fin del titulo */
 
@@ -43,14 +43,14 @@
 .grafica h1{
     font-weight: bold;
     padding-top: 15px;
-    font-size: 19px;
+    font-size: 13px;
     margin-left: 30px;
     margin-bottom: -18px;
 }
 #chart{   
     margin-top: 15px;
     margin: 0px auto;
-    width: 60%;
+    width: 90%;
     height: 330px;
 }
 
@@ -63,7 +63,7 @@
 .tres h1{
     font-weight: bold;
     padding-top: 15px;
-    font-size: 19px;
+    font-size: 13px;
     margin-left: 30px;
     margin-bottom: -18px;
 }
@@ -85,7 +85,7 @@
 
     #table-perfil .perfil {
     margin-left: 50px;
-    flex-basis: 57%;
+    width: 810px;
 }
 .table1{
     margin-bottom: -20px;
@@ -94,16 +94,17 @@
     margin-top: 18px;
     border-radius: 15px;
     overflow: hidden;
-    font-size: 14px;
     width: 410px;
 }
 thead{
+    font-size: 12px;
     background: #E0E2EC;
 }
 th{
     color: #54869C;
 }
 td{
+    font-size: 13px;
     color: #78A2B2;
 }
 /* Fin de tablas */

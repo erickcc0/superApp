@@ -1,51 +1,52 @@
 <br><br>
-<div class="container">
-    <table id="t-head">
-        
-  <th></th>
-  <th><strong>DDD</strong></th>
-  <th><strong>Receta</strong></th>
-  <th><strong>Cobertura</strong></th>
-  <th></th>
-    </table>
-    
-    <table id="t-head2" class="table table-borderless">
-        <thead>
-            <tr>
-                <th>Consultor</th>
-                <th>Evo Cont</th>
-                <th>Marcas Cont</th>
-                <th>Crec % no Cont</th>
-                <th>Marcas no Cont</th>
-                <th>EVO</th>
-                <th>Marcas</th>
-                <th>General</th>
-                <th>VIP</th>
-                <th>Nota</th>
-                <th>Rk</th>
-            </tr>
-        </thead>
-    
-    </table>
-    
-    <table id="body">
-    
-        <tbody>
-            <tr *ngFor="let item of table_data?.data">
-              <th>{{item.consultant}}</th>
-              <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.ddd_evo_count}}</td>
-              <td>{{item.ddd_brand_count}}</td>
-              <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.ddd_crec_no_count}}</td>
-              <td>{{item.recipe_brand_no_count}}</td>
-              <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.recipe_evo}}</td>
-              <td>{{item.recipe_brands}}</td>
-              <td>{{item.coverage_general}}</td>
-              <td>{{item.coverage_vip}}</td>
-              <td>{{item.coverage_note}}</td>
-              <td>{{item.coverage_general}}</td>
-            </tr>
-          </tbody>
-    
-    </table> 
+<div>
+  <table id="t-head">
+
+    <th></th>
+    <th><strong>DDD</strong></th>
+    <th><strong>Receta</strong></th>
+    <th><strong>Cobertura</strong></th>
+    <th></th>
+  </table>
+
+  <table id="t-head2" class="table table-borderless">
+    <thead>
+      <tr>
+        <th>Consultor</th>
+        <th>Evo Cont</th>
+        <th>Marcas Cont</th>
+        <th>Crec % no Cont</th>
+        <th>Marcas no Cont</th>
+        <th>EVO</th>
+        <th>Marcas</th>
+        <th>General</th>
+        <th>VIP</th>
+        <th>Nota</th>
+        <th>Rk</th>
+      </tr>
+    </thead>
+
+  </table>
+
+  <table id="body">
+
+    <tbody>
+      <tr *ngFor="let item of table_data?.data">
+        <th>{{item.consultant}}</th>
+        <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.ddd_evo_count}}</td>
+        <td>{{item.ddd_brand_count}}</td>
+        <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.ddd_crec_no_count}}</td>
+        <td>{{item.recipe_brand_no_count}}</td>
+        <td class="arrow"><i class="fas fa-arrow-up"></i>{{item.recipe_evo}}</td>
+        <td>{{item.recipe_brands}}</td>
+        <td>{{item.coverage_general}}</td>
+        <td>{{item.coverage_vip}}</td>
+        <td>{{item.coverage_note}}</td>
+        <td>{{item.coverage_general}}</td>
+      </tr>
+    </tbody>
+
+  </table>
 
 </div>
+<br><br>

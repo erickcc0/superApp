@@ -6,8 +6,8 @@ import { MainDetalleConsultorComponent } from './pages/detalle-consultor/main-de
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'table', component: TableComponent},
+  { path:'home', component: HomeComponent},
+  { path:'table', component: TableComponent},
   { path:'detalle', component:MainDetalleConsultorComponent},
   { path:'dashboard', component:DashboardComponent},
 ];

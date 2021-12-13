@@ -1,9 +1,9 @@
 .container{
-    font-size: 14px;
     margin-bottom: 50px;
 }
+
 .table{
-    border-radius: 0px 0px 17px 17px;
+    border-radius: 0px 0px 10px 10px;
 }   
 #t-head , #t-head2{
     background: #E0E2EC;
@@ -12,18 +12,17 @@
     margin-bottom: 8px;
 }
 
-
 table {
     font-weight: lighter;
     background: white;
-    width: 92%;
+    width: 1088px;
     margin: 0px auto;
-    border-radius: 17px;
+    border-radius: 10px;
     color: #004F6D;
   }
 
   #t-head{
-     border-radius: 17px 17px 0px 0px;
+     border-radius: 10px 10px 0px 0px;
      text-align: center; 
   }
  
@@ -32,7 +31,7 @@ table {
     font-weight: normal;
    }
    #t-head th:nth-child(1) {
-    width: 14%;
+    width: 20%;
   }
   #t-head th:nth-child(2) {
     width: 32%;
@@ -49,6 +48,7 @@ table {
 
 
 tr th{
+  font-size: 14px;
     font-weight: normal;
 }
   th, td {
@@ -102,6 +102,7 @@ tr th{
 
 
 thead{
+  font-size: 14px;
     margin-bottom: 10px;
 }
 

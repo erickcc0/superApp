@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
+
+import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
   selector: 'app-nav-principal',
@@ -7,9 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavPrincipalComponent implements OnInit {
 
-  constructor() { }
+  user: any = {};
 
-  ngOnInit(): void {
+  constructor(private generalService: GeneralService) {
+    this.getUserInfo();
   }
 
+  ngOnInit(): void { }
+
+  getUserInfo() {
+    this.generalService.getProfile()
+      .toPromise().then(
+        (response: any) => {
+          // console.log('response:', response)
+          this.user = response;
+        }
+      );
+  }
 }

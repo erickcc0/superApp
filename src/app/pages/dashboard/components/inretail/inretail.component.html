@@ -1,3 +1,4 @@
+<br><br>
 <div id="table-perfil">
 
     <div class="perfil">
@@ -6,16 +7,16 @@
         </div>
         <div class="grafica uno">
             <div id="chart-demo">
-                <dx-chart palette="Violet" [dataSource]="countriesInfo">
+                <dx-chart palette="Violet" [dataSource]="tendencia">
                   <dxi-series
                     *ngFor="let energy of energySources"
-                    [valueField]="energy.value"
+                    [valueField]="energy.Value"
                     [name]="energy.name"
                   >
-                  </dxi-series>
+                </dxi-series>
                   <dxo-common-series-settings
                     #seriesSettings
-                    argumentField="country"
+                    argumentField="index"
                     [type]="types[0]"
                   >
                   </dxo-common-series-settings>
@@ -47,39 +48,18 @@
                         <th><img src="../../../../../assets/recursos/711170.png" alt=""> DISTRITOS</th>
                         <th>YTD ANT</th>
                         <th>YTD ACT</th>
-                        <th>CREC</th>
+                        <th><img src="../../../../../assets/recursos/Path 2386.png" alt=""> CREC</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngFor="let dsoles of distritosSoles">
                     <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
+                        <td>{{dsoles.distrito}}</td>
+                        <td>{{dsoles.YTD_ANT | number}}</td>
+                        <td>{{dsoles.YTD_ACT | number}}</td>
+                        <td style="color: red; font-weight: bold;">
+                            <img src="../../../../../assets/recursos/Group 1130.png" alt=""> 
+                            {{dsoles.CREC | number}}
+                        </td>
                     </tr>
 
                 </tbody>
@@ -88,11 +68,11 @@
        <div class="grafica dos">
         <div class="barras">
             <h1>Distritos (Soles)</h1>
-            <dx-chart id="chart" [dataSource]="grossProductData" (onPointClick)="onPointClick($event)">
-                <dxi-series valueField="year2018" name="2018" color="#009CDE"></dxi-series>
-                <dxi-series valueField="year2017" name="2017" color="#ABE8F7"></dxi-series>
+            <dx-chart id="chart" [dataSource]="distritosSoles" (onPointClick)="onPointClick($event)">
+                <dxi-series valueField="YTD_ANT" name="YTD_ANT" color="#009CDE"></dxi-series>
+                <dxi-series valueField="YTD_ACT" name="YTD_ACT" color="#ABE8F7"></dxi-series>
     
-                <dxo-common-series-settings argumentField="state" type="bar" hoverMode="allArgumentPoints"
+                <dxo-common-series-settings argumentField="distrito" type="bar" hoverMode="allArgumentPoints"
                     selectionMode="allArgumentPoints">
                     <dxo-label [visible]="true" [format]="{
                   type: 'fixedPoint',
@@ -111,54 +91,32 @@
             <table class="table table-borderless bg-white">
                 <thead>
                     <tr>
-                        <th><img src="../../../../../assets/recursos/mercados icon.png" alt="">DISTRITOS</th>
+                        <th><img src="../../../../../assets/recursos/mercados icon.png" alt="">MARCAS</th>
                         <th>YTD ANT</th>
                         <th>YTD ACT</th>
-                        <th>CREC</th>
+                        <th><img src="../../../../../assets/recursos/Path 2386.png" alt="">CREC</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngFor="let marca of marcas">
                     <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
+                        <td>{{marca.MARCA_IMS}}</td>
+                        <td>{{marca.YTD_ANT | number}}</td>
+                        <td>{{marca.YTD_ACT | number}}</td>
+                        <td style="color: red; font-weight: bold;">
+                            <img src="../../../../../assets/recursos/Group 1130.png" alt=""> 
+                            {{marca.CREC  | number}}
+                        </td>
                     </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    <tr>
-                        <td>MIRAFLORES</td>
-                        <td>4,7241</td>
-                        <td>4,874</td>
-                        <td style="color: red; font-weight: bold;"><img src="../../../../../assets/recursos/Group 1130.png" alt=""> -1.2%</td>
-                    </tr>
-                    
                 </tbody>
             </table>
         </div>
         <div class="grafica tres">
             <h1>Marcas (Soles)</h1>
-            <dx-chart id="chart1" [dataSource]="grossProductData1" (onPointClick)="onPointClick1($event)">
-                <dxi-series valueField="year2018" name="2018" color="#009CDE"></dxi-series>
-                <dxi-series valueField="year2017" name="2017" color="#ABE8F7"></dxi-series>
+            <dx-chart id="chart1" [dataSource]="marcas" (onPointClick)="onPointClick1($event)">
+                <dxi-series valueField="YTD_ANT" name="YTD_ANT" color="#009CDE"></dxi-series>
+                <dxi-series valueField="YTD_ACT" name="YTD_ACT" color="#ABE8F7"></dxi-series>
     
-                <dxo-common-series-settings argumentField="state" type="bar" hoverMode="allArgumentPoints"
+                <dxo-common-series-settings argumentField="MARCA_IMS" type="bar" hoverMode="allArgumentPoints"
                     selectionMode="allArgumentPoints">
                     <dxo-label [visible]="true" [format]="{
                   type: 'fixedPoint',

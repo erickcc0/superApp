@@ -7,7 +7,7 @@
 
 #head-table{
     margin-left: 50px;
-    width: 720px;
+    width: 636px;
     margin-top: 20px;
     background: white;
     border-radius: 18px;
@@ -30,29 +30,30 @@
   #t-head th{
     color: #246881;
   font-weight: normal;
-  font-size: 13px;
-  padding-left: 48px;   }
+  font-size: 12px;
+  padding-left: 29px;   }
   
   
   #t-body{
+      font-size: 13px;
     height: 33px;
     margin-left: 21%;
     justify-content: center;
     border-radius: 18px;
     background: #3ACC6E;
     color: white;
-    width: 450px;
+    width: 366px;
     margin-bottom: 25px;
   }
   
   #t-body table{
     line-height: 33px;
     margin: 12px;
-    width: 450px;
+    width: 350px;
     border-radius: 15px;
   }
   #t-body td{
-    padding-left: 30px;
+    padding-left: 10px;
   }
   
   #t-body td:nth-child(1){
@@ -61,12 +62,12 @@
   #grafico-barras{
       display: flex;
     margin-left: 50px;
-    width: 720px;
+    width: 636px;
     margin-top: 20px;
     background: white;
     border-radius: 18px;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
     height: 300px;
 }
     ::ng-deep #chart{
@@ -75,16 +76,17 @@
 }  
 
 #table-neosalud{
-    font-size: 14px;
+    font-size: 13px;
     overflow: hidden;
     padding-bottom: -100px;
     border-radius: 17px;
     margin-left: 50px;
-    width: 720px;
+    width: 636px;
 
 }
 
 #table-neosalud thead{
+    font-size: 12px;
     font-weight:lighter;
     color: #38738C;
     background: #E0E2EC;
@@ -120,8 +122,8 @@
     height: 460px;
 }
 .gd{
-    width: 700px;
-    height: 500px;
+    width: 5px;
+    height: 318px;
 }
 .pointer{
     transition: all 200ms;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InretailService } from 'src/app/services/inretail.service';
 
 @Component({
   selector: 'app-inretail',
@@ -8,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class InretailComponent implements OnInit {
 
 // Grafica 1
-  types: string[] = ['line', 'stackedline', 'fullstackedline'];
+
+types: string[] = ['line', 'stackedline', 'fullstackedline'];
 
 energySources: any[] = [
-    { value: 'hydro', name: 'Hydro-electric' },
+    { value: 'value', name: 'Meses' },
 
   ];
   
@@ -130,11 +132,51 @@ onPointClick1(e:any) {
 // *********************************************
 
 
+  public distritosSoles: any = [];
+  public marcas: any = [];
+  // Grafica 1
+  public tendencia:any = [];
 
-
-  constructor() { }
+  constructor(
+    private _inretailService: InretailService
+  ) { }
 
   ngOnInit(): void {
+    this.getTendenciaGeneral()
+    this.getDistritoSoles();
+    this.getMarcas();
+  }
+// Grafica 1
+  getTendenciaGeneral() {
+    this._inretailService
+      .getTendenciaGeneral().toPromise().then(
+        resp => {
+          this.tendencia = resp;
+          console.table(this.tendencia);
+        }
+      );
+  }
+// Fin de Grafica 1
+
+  getDistritoSoles() {
+    this._inretailService
+      .getDistritos().toPromise().then(
+        resp => {
+          this.distritosSoles = resp;
+          console.log(this.distritosSoles);
+        }
+      );
+  }
+
+  getMarcas(): void {
+    this._inretailService
+      .getMarcas().subscribe(
+        resp => {
+          this.marcas = resp;
+          console.log(this.marcas);
+        }
+      );
   }
 
 }
+
