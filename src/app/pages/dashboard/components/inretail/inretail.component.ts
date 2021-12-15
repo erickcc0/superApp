@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
+
+import { GeneralService } from 'src/app/services/general.service';
 import { InretailService } from 'src/app/services/inretail.service';
 
 @Component({
@@ -13,10 +18,10 @@ export class InretailComponent implements OnInit {
 types: string[] = ['line', 'stackedline', 'fullstackedline'];
 
 energySources: any[] = [
-    { value: 'value', name: 'Meses' },
+  { value: 'hydro', name: 'Hydro-electric' },
 
-  ];
-  
+];
+
 countriesInfo: any[] = [{
     country: 'USA',
     hydro: 59.8
@@ -138,7 +143,8 @@ onPointClick1(e:any) {
   public tendencia:any = [];
 
   constructor(
-    private _inretailService: InretailService
+    private _inretailService: InretailService,
+    public generalService: GeneralService
   ) { }
 
   ngOnInit(): void {
@@ -149,7 +155,7 @@ onPointClick1(e:any) {
 // Grafica 1
   getTendenciaGeneral() {
     this._inretailService
-      .getTendenciaGeneral().toPromise().then(
+      .getTendenciaGeneral(this.generalService.generic_data.consultant?.consultant_data.user_name).toPromise().then(
         resp => {
           this.tendencia = resp;
           console.table(this.tendencia);
@@ -160,7 +166,7 @@ onPointClick1(e:any) {
 
   getDistritoSoles() {
     this._inretailService
-      .getDistritos().toPromise().then(
+      .getDistritos(this.generalService.generic_data.consultant?.consultant_data.user_name).toPromise().then(
         resp => {
           this.distritosSoles = resp;
           console.log(this.distritosSoles);
@@ -170,7 +176,7 @@ onPointClick1(e:any) {
 
   getMarcas(): void {
     this._inretailService
-      .getMarcas().subscribe(
+      .getMarcas(this.generalService.generic_data.consultant?.consultant_data.user_name).subscribe(
         resp => {
           this.marcas = resp;
           console.log(this.marcas);

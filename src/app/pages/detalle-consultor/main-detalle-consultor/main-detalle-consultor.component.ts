@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
+
+import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
   selector: 'app-main-detalle-consultor',
@@ -7,7 +12,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainDetalleConsultorComponent implements OnInit {
 
-  constructor() { }
+  constructor(public generalService: GeneralService) {
+    console.log('this.generalService.globaVar:', this.generalService.generic_data)
+  }
 
   ngOnInit(): void {
   }

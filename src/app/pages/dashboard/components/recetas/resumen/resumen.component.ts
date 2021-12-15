@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
+
+import { GeneralService } from 'src/app/services/general.service';
+
 import { RecetasService } from '../../../services/recetas.service';
 
 @Component({
@@ -8,7 +14,7 @@ import { RecetasService } from '../../../services/recetas.service';
 })
 export class ResumenComponent implements OnInit {
 
-  constructor( private _recetasService: RecetasService) { }
+  constructor(private _recetasService: RecetasService, public generalService: GeneralService) { }
 
   mercado:any[] = [];
   marcas:any[] = [];
@@ -20,7 +26,7 @@ export class ResumenComponent implements OnInit {
 
   // Tabla Mercado
   getTMercado(){
-    this._recetasService.getTMercados()
+    this._recetasService.getTMercados(this.generalService.generic_data.consultant?.consultant_data.user_name)
       .subscribe(resp =>{
         this.mercado = resp;
       },(err)=>{
@@ -31,13 +37,13 @@ export class ResumenComponent implements OnInit {
 
   // Tabla Marcas
   getTMarcas(){
-    this._recetasService.getMarcas()
+    this._recetasService.getMarcas(this.generalService.generic_data.consultant?.consultant_data.user_name)
       .subscribe(resp=>{
         this.marcas = resp;
       },(err)=>{
         console.log(err);
         this.marcas = [];
       });
-  
+
   }
 }

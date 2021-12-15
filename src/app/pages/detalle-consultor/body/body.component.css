@@ -1,4 +1,5 @@
 #body-info{
+    z-index: 1;
     height: 280px;
     margin-left:40px;
 }
@@ -11,7 +12,7 @@
     color: #4A879D;
     margin-top: 15px;
     font-weight: 500;
-    font-size: 14.5px;
+    font-size: 14px;
 }
 
 #body-info svg{
@@ -34,15 +35,15 @@
 }
 .strong{
     color: #004F6D !important;
-    font-weight: bold !important;
+    font-weight: 500 !important;
 }
 .data{
     color: #508CA1;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 300;
 }
 #body-info .sub{
-    font-size: 13px;
+    font-size: 11px;
     color: rgb(105, 102, 102);
 }
 #body-info .first{
@@ -147,6 +148,7 @@ hr{
 /****************************************************************************************** Graficos-home */
 /* PIE */
 .skills-container {
+    z-index: 1;
     margin-top: 2em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -157,23 +159,26 @@ hr{
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
-  
+
   .circular-progress {
+      z-index: 1;
     margin: auto;
     position: relative;
   }
-  
+
   /* Tamaño */
   .circular-progress,
   .circular-progress:before,
   .circular-progress:after {
+    z-index: 1;
     width: 137px;
     height: 137px;
     border-radius: 50%;
   }
-  
+
   .circular-progress:before,
   .circular-progress:after {
+      z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -194,20 +199,21 @@ hr{
     *text-transform: uppercase;
     line-height: 170px;
   }
-  
+
   .css {
+      z-index: 1;
     background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
     background: linear-gradient(0deg, #009CDE 50%, #E8EAF3 50%);
     -webkit-transform: rotate(108deg);
         -ms-transform: rotate(108deg);
             transform: rotate(108deg);
   }
-  
+
   .css:before,
   .css:after {
     color: #c5c5c5;
   }
-  
+
   .css:before {
     background: white content-box;
     -webkit-transform: rotate(-108deg);
@@ -215,7 +221,7 @@ hr{
             transform: rotate(-108deg);
     content: "60%";
   }
-  
+
   .css:after {
     background: -webkit-linear-gradient(transparent 50%, white 50%);
     background: linear-gradient(transparent 50%, white 50%);
@@ -224,20 +230,21 @@ hr{
         -ms-transform: rotate(-108deg) scale(1.1);
             transform: rotate(-108deg) scale(1.1);
   }
-  
+
   .javascript {
+    z-index: 1;
     background: -webkit-linear-gradient(90deg, #00C2E8 50%, #00C2E8 50%);
     background: linear-gradient(0deg, #52E085 50%, #E8EAF3 50%);
       -webkit-transform: rotate(162deg);
         -ms-transform: rotate(162deg);
             transform: rotate(162deg);
   }
-  
+
   .javascript:before,
   .javascript:after {
     color: #c5c5c5;
   }
-  
+
   .javascript:before {
     background: white content-box;
     -webkit-transform: rotate(-162deg);
@@ -245,7 +252,7 @@ hr{
             transform: rotate(-162deg);
     content: "90%";
   }
-  
+
   .javascript:after {
     background: -webkit-linear-gradient(transparent 50%, white 50%);
     background: linear-gradient(transparent 50%, white 50%);
@@ -278,7 +285,7 @@ hr{
 
 ::ng-deep #chart-demo .chart{
     margin-top: -30px;
-    margin-left: -70px;
+    margin-left: -90px;
     font-weight: bold;
     width: 450px;
     height: 250px;
@@ -307,4 +314,7 @@ hr{
 }
 .div-grafica3 h1{
     font-size: 17px;
+}
+.note{
+    margin-right: 70px;
 }

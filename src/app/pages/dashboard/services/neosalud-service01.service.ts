@@ -1,6 +1,8 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+
+import { Observable } from 'rxjs';
+
 import { neosalud } from '../interfaces/neosalud.interface';
 
 @Injectable({
@@ -8,16 +10,14 @@ import { neosalud } from '../interfaces/neosalud.interface';
 })
 export class NeosaludService01Service {
 
-  private apiUrl:string = 'https://cawjhjx0fj.execute-api.us-east-1.amazonaws.com/consultant/ANFOSLX/neosalud/getytd';
+  private apiUrl: string = 'https://cawjhjx0fj.execute-api.us-east-1.amazonaws.com/consultant/';
 
-  //consultant/ANFOSLX/neosalud/getytd?limit=10
+  constructor(private http: HttpClient) { }
 
-  constructor( private http: HttpClient ) { }
 
-  
-  ConsultaNeosaludById():Observable<neosalud[]>{
-    const url= `${this.apiUrl}`;
-   return this.http.get<neosalud[]>(url);
+  ConsultaNeosaludById(id_consultant: any): Observable<neosalud[]> {
+    const url = `${this.apiUrl}` + id_consultant + '/neosalud/getytd';
+    return this.http.get<neosalud[]>(url);
 
   }
 

@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,15 +14,15 @@ export class RecetasService {
 
   }
 
-  getTMercados(): Observable<any[]> {
-    let headers = 'consultant/ANDRADC/base_asigna/resultado_base_asigna_m';
+  getTMercados(id_consultant: any): Observable<any[]> {
+    let headers = 'consultant/' + id_consultant + '/base_asigna/resultado_base_asigna_m';
     let url = `${this.apiUrl}${headers}`;
     return this.http.get<any[]>(url);
 
   }
 
-  getMarcas():Observable<any[]>{
-    let headers = 'consultant/ANDRADC/base_asigna/resultado_base_asigna_p';
+  getMarcas(id_consultant: any):Observable<any[]>{
+    let headers = 'consultant/' + id_consultant + '/base_asigna/resultado_base_asigna_p';
     let url = `${this.apiUrl}${headers}`;
     return this.http.get<any[]>(url);
   }

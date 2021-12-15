@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
+
+import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
   selector: 'app-body',
@@ -7,10 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  data: any = {};
+
+  constructor(public generalService: GeneralService) {
+  }
 
   ngOnInit(): void {
+    this.getDetalleConsultor();
   }
+
+  getDetalleConsultor() {
+    this.generalService.getConsultantsDetail(this.generalService.generic_data.consultant.consultant_user_name)
+      .subscribe(resp => {
+        this.data = resp;
+        console.log('resp:', resp)
+      }, err => {
+        console.log(err);
+      });
+  }
+
   customizeText(arg: any) {
     return `${arg.valueText} %`;
   }

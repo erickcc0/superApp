@@ -1,7 +1,15 @@
+import {
+  HttpClient,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError} from 'rxjs';
+
+import {
+  Observable,
+  throwError,
+} from 'rxjs';
 import { catchError } from 'rxjs/operators';
+
 import { Global } from './global';
 
 @Injectable({
@@ -10,35 +18,35 @@ import { Global } from './global';
 export class InretailService {
 
   public url = ''
-  private headers = new HttpHeaders({'Content-Type': 'application/json'});
+  private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(
     private _http: HttpClient
-  ) { 
+  ) {
     this.url = Global.url;
   }
 
-  getDistritos(): Observable<any> {
+  getDistritos(id_consultant: any): Observable<any> {
     return this._http
-        .get(this.url + 'consultant/OJEDAAX3/inretail/getdistritossoles', {headers: this.headers})
-        .pipe(
-          catchError((e) => {
-            if(e.status === 404) {
-              return throwError(e.status.error);
-            }
-            console.log(e);
-            console.log('Error al traer Ditritos');
-            return throwError(e);
-          })
-        );
-  }
-
-  getMarcas(): Observable<any> {
-    return this._http
-      .get(this.url + 'consultant/ANDRADC/inretail/getmarcassoles', {headers: this.headers})
+      .get(this.url + 'consultant/' + id_consultant + '/inretail/getdistritossoles', { headers: this.headers })
       .pipe(
         catchError((e) => {
-          if(e.status === 404) {
+          if (e.status === 404) {
+            return throwError(e.status.error);
+          }
+          console.log(e);
+          console.log('Error al traer Ditritos');
+          return throwError(e);
+        })
+      );
+  }
+
+  getMarcas(id_consultant: any): Observable<any> {
+    return this._http
+      .get(this.url + 'consultant/' + id_consultant + '/inretail/getmarcassoles', { headers: this.headers })
+      .pipe(
+        catchError((e) => {
+          if (e.status === 404) {
             return throwError(e.status.error);
           }
           console.log(e);
@@ -48,12 +56,12 @@ export class InretailService {
       );
   }
 
-  getMercados(): Observable<any> {
+  getMercados(id_consultant: any): Observable<any> {
     return this._http
-      .get(this.url  + 'consultant/OJEDAAX3/ddd/getresumenmercados', {headers: this.headers})
+      .get(this.url + 'consultant/' + id_consultant + '/ddd/getresumenmercados', { headers: this.headers })
       .pipe(
         catchError((e) => {
-          if(e.status === 404) {
+          if (e.status === 404) {
             return throwError(e.status.error);
           }
           console.log(e);
@@ -63,13 +71,13 @@ export class InretailService {
       );
   }
 
- 
-  getTendenciaGeneral(): Observable<any> {
+
+  getTendenciaGeneral(id_consultant: any): Observable<any> {
     return this._http
-      .get(this.url  + 'consultant/ANDRADC/inretail/gettendenciageneral', {headers: this.headers})
+      .get(this.url + 'consultant/' + id_consultant + '/inretail/gettendenciageneral', { headers: this.headers })
       .pipe(
         catchError((e) => {
-          if(e.status === 404) {
+          if (e.status === 404) {
             return throwError(e.status.error);
           }
           console.log(e);

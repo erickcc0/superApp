@@ -12,12 +12,19 @@ import { catchError } from 'rxjs/operators';
 })
 export class GeneralService {
 
-  private url_base = 'https://cawjhjx0fj.execute-api.us-east-1.amazonaws.com/';
-  public headers = { headers: { 'Content-Type': 'application/json' }};
+  public url_base = 'https://cawjhjx0fj.execute-api.us-east-1.amazonaws.com/';
+  public headers = { headers: { 'Content-Type': 'application/json' } };
+  public generic_data: any;
+  public idSupervisor: string = 'ROJASAL';
 
   constructor(
     private http: HttpClient
   ) {
+    this.getGenericDataFromLocalStorage();
+  }
+
+  getGenericDataFromLocalStorage() {
+    this.generic_data = JSON.parse(localStorage.getItem('generic_data') || '{}');
   }
 
   functionForError(e: any, errorText: string) {
@@ -28,6 +35,11 @@ export class GeneralService {
     console.log(e);
     console.log(errorText);
     return throwError(e);
+  }
+
+  updateGlobalVars(data?: any) {
+    localStorage.setItem('generic_data', JSON.stringify(data));
+    this.generic_data = data;
   }
 
   getProfile(): Observable<any> {
@@ -50,18 +62,56 @@ export class GeneralService {
       );
   }
 
-  getResultsLastMonth(idSupervisor:string): Observable<any> {
+  getResultsLastMonth(sort: string = ''): Observable<any> {
     return this.http
-
-
-      .get(this.url_base + 'summary/'+idSupervisor+'/last_months_results/?limit=50&page=1&sort=desc', this.headers)
+      .get(this.url_base
+        + 'summary/'
+        + this.idSupervisor
+        + '/last_months_results/?limit=250&page=1'
+        + (sort !== '' ? '&sort=' + sort : ''),
+        this.headers)
       .pipe(
         catchError((e) => {
           return this.functionForError(e, 'Error al traer al getResultsLastMonth')
         })
       );
   }
-  
+
+  getConsultants(): Observable<any> {
+    return this.http
+      .get(this.url_base
+      + 'supervisor/' + this.idSupervisor + '/consultants',
+        this.headers)
+      .pipe(
+        catchError((e) => {
+          return this.functionForError(e, 'Error al traer al getConsultants')
+        })
+      );
+  }
+
+  getConsultantsDetail(idConsultant: string): Observable<any> {
+    return this.http
+      .get(this.url_base
+      + 'summary/' + this.idSupervisor + '/consultant/' + idConsultant,
+        this.headers)
+      .pipe(
+        catchError((e) => {
+          return this.functionForError(e, 'Error al traer al getDetailConsultants')
+        })
+      );
+  }
+
+  getConsultantsDashboard(idConsultant: string): Observable<any> {
+    return this.http
+      .get(this.url_base
+      + 'summary/' + this.idSupervisor + '/consultant/' + idConsultant,
+        this.headers)
+      .pipe(
+        catchError((e) => {
+          return this.functionForError(e, 'Error al traer al getDetailConsultants')
+        })
+      );
+  }
 }
 
 

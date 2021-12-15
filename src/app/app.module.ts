@@ -1,32 +1,56 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
-/*Librería DevExtreme*/ 
-import { DxButtonModule } from 'devextreme-angular';
-import { DxTemplateModule } from 'devextreme-angular';
-import { DxDataGridModule } from 'devextreme-angular';
-import { DxCircularGaugeModule } from 'devextreme-angular';
-import { DxChartModule } from 'devextreme-angular';
-import { DxSelectBoxModule } from 'devextreme-angular';
+/*Librería DevExtreme*/
+import {
+  DxButtonModule,
+  DxChartModule,
+  DxCircularGaugeModule,
+  DxDataGridModule,
+  DxSelectBoxModule,
+  DxTemplateModule,
+} from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+import {
+  DashboardRoutingModule,
+} from './pages/dashboard/dashboard-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { NavPrincipalComponent } from './shared/nav-principal/nav-principal.component';
-import { NavDashboardComponent } from './shared/nav-dashboard/nav-dashboard.component';
-import { TableComponent } from './pages/graficos/table/table.component';
-import { GraficoshomeComponent } from './pages/graficos/graficoshome/graficoshome.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
-import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
-import { MainDetalleConsultorComponent } from './pages/detalle-consultor/main-detalle-consultor/main-detalle-consultor.component';
-import { Grafico1Component } from './pages/detalle-consultor/grafico1/grafico1.component';
-import { Grafico2Component } from './pages/detalle-consultor/grafico2/grafico2.component';
-import { Grafico3Component } from './pages/detalle-consultor/grafico3/grafico3.component';
-import { SidebarComponent } from './pages/detalle-consultor/sidebar/sidebar.component';
 import { BodyComponent } from './pages/detalle-consultor/body/body.component';
-
+import {
+  Grafico1Component,
+} from './pages/detalle-consultor/grafico1/grafico1.component';
+import {
+  Grafico2Component,
+} from './pages/detalle-consultor/grafico2/grafico2.component';
+import {
+  Grafico3Component,
+} from './pages/detalle-consultor/grafico3/grafico3.component';
+import {
+  MainDetalleConsultorComponent,
+} from './pages/detalle-consultor/main-detalle-consultor/main-detalle-consultor.component';
+import {
+  SidebarComponent,
+} from './pages/detalle-consultor/sidebar/sidebar.component';
+import {
+  GraficoshomeComponent,
+} from './pages/graficos/graficoshome/graficoshome.component';
+import { TableComponent } from './pages/graficos/table/table.component';
+import { HomeComponent } from './pages/home/home.component';
+import {
+  NavDashboardComponent,
+} from './shared/nav-dashboard/nav-dashboard.component';
+import {
+  NavPrincipalComponent,
+} from './shared/nav-principal/nav-principal.component';
+import { VisitasComponent } from './pages/detalle-consultor/visitas/visitas.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +66,8 @@ import { BodyComponent } from './pages/detalle-consultor/body/body.component';
     Grafico2Component,
     Grafico3Component,
     SidebarComponent,
-    BodyComponent
+    BodyComponent,
+    VisitasComponent
 
   ],
   imports: [
@@ -56,9 +81,11 @@ import { BodyComponent } from './pages/detalle-consultor/body/body.component';
     DxChartModule,
     DxSelectBoxModule,
     DashboardModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  exports:[
+  exports: [
     TableComponent
   ],
   providers: [],
